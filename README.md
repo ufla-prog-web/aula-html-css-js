@@ -36,7 +36,7 @@ Fonte: [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-ap
 
 O presente projeto foca no desenvolvimento da camada de apresentação.
 
-![Explicação DOM](./docs/Camada-Apresentação.png)
+![Camada de Apresentação](./docs/Camada-Apresentação.png)
 
 Fonte: [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://twitter.com/cewebbr/status/1290302291388424193/photo/1)
 
