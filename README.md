@@ -446,9 +446,7 @@ Crie um arquivo chamado `script.js` dentro da pasta `page` e copie e cole nesse 
 
 ```javascript
 let jogadorAtual = 'X';
-let tabuleiro = ['', '', '', 
-                '', '', '', 
-                '', '', ''];
+let tabuleiro = ['', '', '', '', '', '', '', '', ''];
 
 function fazerMovimento(index) {
     if (tabuleiro[index] == '') {
@@ -460,9 +458,7 @@ function fazerMovimento(index) {
 
 function reiniciarJogo() {
     jogadorAtual = 'X';
-    tabuleiro = ['', '', '', 
-                '', '', '', 
-                '', '', ''];
+    tabuleiro = ['', '', '', '', '', '',  '', '', ''];
     const celulas = document.getElementsByClassName('celula');
     for (let i = 0; i < celulas.length; i++) {
         celulas[i].textContent = '';
@@ -521,9 +517,7 @@ Altere o conteúdo do arquivo `script.js` dentro da pasta `page` para o seguinte
 ```javascript
 let jogoAtivo = true;
 let jogadorAtual = 'X';
-let tabuleiro = ['', '', '', 
-                '', '', '', 
-                '', '', ''];
+let tabuleiro = ['', '', '', '', '', '', '', '', ''];
 
 const padroesVitoria = [
     [0, 1, 2], //primeira linha
@@ -582,9 +576,7 @@ function fazerMovimento(index) {
 function reiniciarJogo() {
     jogoAtivo = true;
     jogadorAtual = 'X';
-    tabuleiro = ['', '', '', 
-                '', '', '', 
-                '', '', ''];
+    tabuleiro = ['', '', '', '', '', '', '', '', ''];
     const celulas = document.getElementsByClassName('celula');
     for (let i = 0; i < celulas.length; i++) {
         celulas[i].textContent = '';
@@ -738,18 +730,16 @@ Altere o conteúdo do arquivo `script.js` dentro da pasta `page` para o seguinte
 ```javascript
 let jogoAtivo = true;
 let jogadorAtual = 'X';
-let tabuleiro = ['', '', '', 
-                '', '', '', 
-                '', '', ''];
+let tabuleiro = ['', '', '', '', '', '', '', '', ''];
+
+let qtdVitoriaX = 0;
+let qtdVitoriaO = 0;
+let qtdEmpate = 0;
 
 document.getElementById('imgX').style.opacity = 1.0;
 document.getElementById('imgO').style.opacity = 0.2;
 document.getElementById('imgX').style.width = "150px";
 document.getElementById('imgO').style.width = "150px";
-
-qtdVitoriaX = 0
-qtdVitoriaO = 0
-qtdEmpate = 0
 
 const padroesVitoria = [
     [0, 1, 2], //primeira linha
