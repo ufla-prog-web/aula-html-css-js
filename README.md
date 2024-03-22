@@ -863,6 +863,14 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ![Imagem Jogo 06](./docs/img_jogo6.png)
 
+## Publicando o Jogo no Github
+
+Para publicar/postar o jogo desenvolvido no Github Pages faça o seguinte.
+
+Primeiramente, sua o seu jogo no github. Depois vá em `Settings`. Clique em `Pages`. Na parte de `Build and deployment` e em `Branch`, selecione o branch `main` e clique em `Save`.
+
+![Publicando o Jogo no Github](./docs/postando-jogo-github.png)
+
 ## Melhorias no Projeto do Jogo
 
 A seguir tem-se algumas sugestões de melhoria nesse projeto de jogo.
