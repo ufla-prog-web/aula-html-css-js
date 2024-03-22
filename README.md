@@ -108,7 +108,19 @@ Crie um arquivo chamado `index.html` dentro da pasta `page` e copie e cole nesse
 </html>
 ```
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. Você pode abrir o arquivo html como se fosse um arquivo ou então mandar um servidor web prover essa página (botão direito no arquivo e clicar em `Open with Live Server`). Se não tiver a extensão do Live Server instalada no seu Visual Studio Code, instale-a.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. Você pode abrir o arquivo html como se fosse um arquivo ou então mandar um servidor web prover essa página (botão direito no arquivo e clicar em `Open with Live Server`). Se não tiver a extensão do Live Server instalada no seu Visual Studio Code, instale-a. Uma outra forma é iniciando um servidor web no diretório que contém o arquivo `index.html`. Execute o comando abaixo.
+
+```bash
+cd page
+python3 -m http.server
+```
+
+Para trocar a porta utilizada, execute o comando abaixo:
+
+```bash
+cd page
+python3 -m http.server 8123
+```
 
 A página exibida deverá ser parecer com a imagem abaixo.
 
