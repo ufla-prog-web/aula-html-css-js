@@ -1,4 +1,4 @@
-# Aula de HTML, CSS e JavaScript
+# Aula de introdução ao HTML, CSS e JavaScript
 
 <p align="center">
   <a href="#">
@@ -12,15 +12,15 @@
   </a>
 </p>
 
-Aula de HTML, CSS e JavaScript. Projeto usado para fazer uma introdução a camada de apresentação para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da UFLA.
+Aula de introdução ao HTML, CSS e JavaScript. Projeto usado para fazer uma introdução a camada de apresentação para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA).
 
 O objetivo desse projeto é criar um jogo da velha completo que tenha dois personagens que o jogam. Uma pequena animação deve ser feita a cada vez que um jogador fizer sua jogada. O jogo contém também um histórico dos status final dos jogos anteriores.
 
 ## Linguagens Utilizadas
 
-* HTML - Estrutura - [link](https://www.w3schools.com/html/default.asp)
-* CSS - Apresentação - [link](https://www.w3schools.com/css/default.asp)
-* JavaScript - Comportamento - [link](https://www.w3schools.com/js/default.asp)
+* HTML - Estrutura - [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
+* CSS - Apresentação - [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
+* JavaScript - Comportamento - [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
 
 ## Ferramentas Utilizadas
 
@@ -34,7 +34,7 @@ Arquitetura Geral das Aplicação Web
 
 Fonte: [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/](https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/)
 
-O presente projeto foca no desenvolvimento da camada de apresentação.
+O presente projeto foca no desenvolvimento da Camada de Apresentação. Essa camada pode ser organizada através da separação em HTML (ou estrutura), CSS (ou apresentação) e JavaScript (ou comportamento).
 
 ![Camada de Apresentação](./docs/Camada-Apresentação.png)
 
@@ -42,11 +42,13 @@ Fonte: [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://
 
 ## Objetivo da Aula
 
-A animação abaixo mostra de forma visual o resultado esperado nesta aula.
+A animação abaixo mostra de forma visual o resultado esperado após a execução dos passos desta aula.
 
 ![Objetivo da Aula](./docs/objetivo_jogo.gif)
 
 ## Desenvolvimento do Projeto
+
+Os passos a seguir devem ser seguidos para conseguir alcançar o objetivo estabelecido - desenvolver o Jogo da Velha Temático.
 
 ### Clonando o Repositório
 
@@ -68,7 +70,7 @@ Abra o IDE Visual Studio Code na pasta `aula-html-css-js`.
 
 ### Criando a Estrutura do Jogo - HTML
 
-O desenvolvimento de qualquer página web inicia-se com a estrutura da página em HTML.
+O desenvolvimento de qualquer página web inicia-se com a estrutura da página em HTML. Nessa etapa nos preocupamos com a organização (estrutura) da página e não com a apresentação.
 
 Crie um arquivo chamado `index.html` dentro da pasta `page` e copie e cole nesse arquivo o código abaixo.
 
@@ -148,7 +150,7 @@ Repare que a maioria dos elementos HTML possuem uma tag de abertura e uma de fec
 
 ### Criando Estilos da Apresentação no Jogo - HTML + CSS
 
-Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de um estilo CSS. Altere o arquivo chamado `index.html` dentro da pasta `page` e coloque o conteúdo do código abaixo.
+Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de um estilo CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata). Altere o arquivo chamado `index.html` dentro da pasta `page` e coloque o conteúdo do código abaixo.
 
 ```html
 <!DOCTYPE html>
@@ -245,7 +247,7 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ### Melhorando a Visualização do Jogo - HTML + CSS
 
-Nessa etapa, iremos melhor um pouco mais a visualização da página web. Para isso iremos atualizar o HTML e o CSS da página. No HTML iremos criar uma estrutura de cabeçalho e rodapé. No CSS iremos estilizar o `body`, `header`, `footer` e `button`.
+Nessa etapa, iremos melhor um pouco mais a visualização da página web. Para isso, iremos atualizar o HTML e o CSS da página. No HTML iremos criar uma estrutura de cabeçalho e rodapé. No CSS iremos estilizar o `body`, `header`, `footer` e `button`.
 
 Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 
@@ -358,9 +360,11 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ![Imagem Jogo 03](./docs/img_jogo3.png)
 
+Repare que até esse passo ao clicar no tabuleiro nenhuma jogada é efetuada. Iremos agora dar comportamento a nossa página.
+
 ### Incorporando Interatividade com o Jogo - HTML + CSS + JS
 
-Nessa etapa, iremos criar interatividade com o nosso jogo através da incorporação de códigos JavaScript. Para isso iremos atualizar o HTML, o CSS da página, além de criar um código JavaScript. No HTML iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS iremos estilizar a célula um pouco mais. No JavaScript iremos permitir fazer jogadas e permitir reiniciar o jogo.
+Nessa etapa, iremos criar interatividade com o nosso jogo através da incorporação de códigos JavaScript. Para isso iremos atualizar o HTML e o CSS da página, além de criar um código JavaScript. No HTML iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS iremos estilizar a célula um pouco mais. No JavaScript iremos permitir fazer jogadas e permitir reiniciar o jogo.
 
 Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 
@@ -473,7 +477,7 @@ A seguir temos algumas explicações sobre o código JavaScript:
 * `fazerMovimento(index)`: Esta função é chamada quando um jogador faz um movimento clicando em uma célula do tabuleiro. Ela recebe um índice como argumento, que representa a posição da célula no tabuleiro. Se a célula estiver vazia (representada por `''` no array tabuleiro), o jogador atual pode fazer o movimento. A função atualiza o estado do tabuleiro, definindo o valor da célula correspondente como o símbolo do jogador atual ('X' ou 'O'). Em seguida, atualiza o texto da célula no HTML para mostrar o símbolo do jogador atual. Por fim, alterna o jogador atual entre 'X' e 'O', para que o próximo jogador possa fazer o movimento.
 * `reiniciarJogo()`: Esta função é chamada quando o jogo precisa ser reiniciado. Ela redefine o jogador atual como 'X' e limpa o tabuleiro, preenchendo-o com valores vazios ''. Em seguida, percorre todas as células do tabuleiro no HTML e remove o texto delas, deixando as células vazias novamente.
 
-Como o JavaScript interage com sua página web? O JavaScript faz essa interação através do DOM (Document Object Model) ou Modelo de Documento do Objeto. Com o JavaScript você pode acessar e alterar elementos, além de poder adicionar novos elementos ao DOM.
+Como o JavaScript interage com sua página web? O JavaScript faz essa interação através do DOM (*Document Object Model* ou Modelo de Documento do Objeto). Com o JavaScript você pode acessar e alterar elementos, além de poder adicionar novos elementos ao DOM.
 
 O que é o DOM? O DOM trata da modelagem de todo o HTML. O DOM é como uma árvore genealógica. O elemento que antecede o document é o window, que nada mais é que a janela do navegador. Em sua estrutura, o document está no topo como objeto global e tem como elemento raiz a tag html e todas as outras descendem dela através das suas ramificações (branchs). A tag html, objeto pai, apresenta dois objetos filhos: o head e o body. A tag head é pai da tag title, e a body é pai das tags a e h1, e assim sucessivamente, de acordo com a hierarquia.
 
@@ -484,6 +488,12 @@ Fonte: [https://en.wikipedia.org/wiki/Document_Object_Model](https://en.wikipedi
 Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá ser parecer com a imagem abaixo.
 
 ![Imagem Jogo 04](./docs/img_jogo4.png)
+
+A seguir estão listados alguns dos métodos no JavaScript para acesso ao DOM:
+
+* document.getElementById(ID);
+* document.getElementsByClassName(CLASS_NAME);
+* document.getElementsByTagName(TAG_NAME);
 
 ### Melhorando a Interatividade com o Jogo - HTML + CSS + JS
 
@@ -602,8 +612,8 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ### Tornando o Jogo Temático e Dinâmico - HTML + CSS + JS
 
-Nessa etapa, iremos tornar o nosso jogo temático e dinâmico. Por temático quermos dizer que iremos colocar dois jogadores no jogo da Velha e os mesmos são do conhecido jogo "Mario Bros" (Mario e Luigi). Para isso iremos atualizar o HTML, o CSS e JavaScript da página web.
-No HTML, iremos colocar duas imagens gif dos personagens citados, além de adicionar o histórico de vitórias. No CSS, iremos colocar mais alguns elementos para estilização dos dois personagens. No JavaScript, iremos colocar animações estilizadas quando um dos jogadores ganhar, além de animações sinalizando a vez de cada jogador.
+Nessa etapa, iremos tornar o nosso jogo temático e dinâmico. Por temático quermos dizer que iremos colocar dois jogadores no jogo da Velha e os mesmos são do conhecido jogo "Mario Bros" (Mario e Luigi). Para isso, iremos atualizar o HTML, o CSS e JavaScript da página web.
+No HTML, iremos colocar duas imagens `gif` dos personagens citados, além de adicionar o histórico de vitórias. No CSS, iremos colocar mais alguns elementos para estilização dos dois personagens. No JavaScript, iremos colocar animações estilizadas quando um dos jogadores ganhar, além de animações sinalizando a vez de cada jogador.
 
 Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 
@@ -855,9 +865,9 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ## Publicando o Jogo no Github
 
-Para publicar/postar o jogo desenvolvido no Github Pages faça o seguinte.
+Para publicar/postar o jogo desenvolvido no Github Pages, faça o seguinte.
 
-Primeiramente, sua o seu jogo no github. Depois vá em `Settings`. Clique em `Pages`. Na parte de `Build and deployment` e em `Branch`, selecione o branch `main` e clique em `Save`.
+Primeiramente, coloque o seu jogo no github. Depois vá em `Settings`. Clique em `Pages`. Na parte de `Build and deployment` e em `Branch`, selecione o branch `main` e clique em `Save`.
 
 ![Publicando o Jogo no Github](./docs/postando-jogo-github.png)
 
