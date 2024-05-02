@@ -1,4 +1,4 @@
-# Aula de introdução ao HTML, CSS e JavaScript
+# Aula de Introdução ao HTML, CSS e JavaScript
 
 <p align="center">
   <a href="#">
@@ -12,21 +12,42 @@
   </a>
 </p>
 
+## Índice
+
+* [Introdução](#introdução)
+* [Recursos Utilizados](#recursos-utilizados)
+* [Fundamentos Teóricos](#fundamentos-teóricos)
+* [Objetivo da Aula](#objetivo-da-aula)
+* [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
+* [Créditos e Referências](#créditos-e-referências)
+
+## Introdução
+
 Aula de introdução ao HTML, CSS e JavaScript. Projeto usado para fazer uma introdução a camada de apresentação para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA).
 
 O objetivo desse projeto é criar um jogo da velha completo que tenha dois personagens que o jogam. Uma pequena animação deve ser feita a cada vez que um jogador fizer sua jogada. O jogo contém também um histórico dos status final dos jogos anteriores.
 
-## Linguagens Utilizadas
+A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possa compreender como as diferentes tecnologias se conectam.
+
+## Recursos Utilizados
+
+A seguir estão listados os principais recursos utilizados no desenvolvimento desta aula.
+
+### Linguagens
 
 * HTML - Estrutura - [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
 * CSS - Apresentação - [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
 * JavaScript - Comportamento - [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
 
-## Ferramentas Utilizadas
+### Ferramentas
 
-* Visual Studio Code - [link](https://code.visualstudio.com/)
+* Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
+* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
+* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
 
-## Arquitetura Web
+## Fundamentos Teóricos
+
+### Arquitetura Web
 
 Arquitetura Geral das Aplicação Web
 
@@ -41,6 +62,8 @@ O presente projeto foca no desenvolvimento da Camada de Apresentação. Essa cam
 Fonte: [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://twitter.com/cewebbr/status/1290302291388424193/photo/1)
 
 ## Objetivo da Aula
+
+O objetivo da aula é apresentar uma introdução ao HTML, CSS e JavaScript. Esses conceitos são abordados durante o desenvolvimento de um jogo da velha temático.
 
 A animação abaixo mostra de forma visual o resultado esperado após a execução dos passos desta aula.
 
@@ -78,6 +101,7 @@ Crie um arquivo chamado `index.html` dentro da pasta `page` e copie e cole nesse
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Jogo da Velha</title>
     </head>
     <body>
@@ -110,6 +134,26 @@ Crie um arquivo chamado `index.html` dentro da pasta `page` e copie e cole nesse
 </html>
 ```
 
+A seguir temos algumas explicações sobre o código HTML:
+
+* A declaração `<!DOCTYPE html>` define que este documento é um documento HTML5.
+* O elemento `<html>` é o elemento raiz de uma página HTML.
+* O elemento `<head>` contém meta informações sobre a página HTML.
+* O elemento `<title>` especifica um título para a página HTML.
+* O elemento `<body>` define o corpo do documento.
+* O elemento `<div>` define define uma divisão lógica no layout da página.
+* O elemento `<h1>` define um título grande.
+* O elemento `<img>` define uma imagem a ser exibida.
+* O elemento `<p>` define um parágrafo.
+* O elemento `<b>` define que o texto está em negrito.
+* O elemento `<hr>` define uma barra horizontal.
+* O elemento `<button>` define um botão.
+* O elemento `<a>` define um link para alguma página.
+
+Repare que a maioria dos elementos HTML possuem uma tag de abertura e uma de fechamento, como `<title>` (que indica abertura) `</title>` (que indica fechamento). Mas existem excessões, como o elemento `<hr>`. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
+
+### Executando a Aplicação Web
+
 Abra o arquivo `index.html` no navegador e veja o conteúdo da página. Você pode abrir o arquivo html como se fosse um arquivo ou então mandar um servidor web prover essa página (botão direito no arquivo e clicar em `Open with Live Server`). Se não tiver a extensão do Live Server instalada no seu Visual Studio Code, instale-a. Uma outra forma é iniciando um servidor web no diretório que contém o arquivo `index.html`. Execute o comando abaixo.
 
 ```bash
@@ -130,24 +174,6 @@ A página exibida deverá ser parecer com a imagem abaixo.
 
 Repare que a página web está bem simples e "feia" esteticamente, posteriormente arrumaremos isso.
 
-A seguir temos algumas explicações sobre o código HTML:
-
-* A declaração `<!DOCTYPE html>` define que este documento é um documento HTML5.
-* O elemento `<html>` é o elemento raiz de uma página HTML.
-* O elemento `<head>` contém meta informações sobre a página HTML.
-* O elemento `<title>` especifica um título para a página HTML.
-* O elemento `<body>` define o corpo do documento.
-* O elemento `<div>` define define uma divisão lógica no layout da página.
-* O elemento `<h1>` define um título grande.
-* O elemento `<img>` define uma imagem a ser exibida.
-* O elemento `<p>` define um parágrafo.
-* O elemento `<b>` define que o texto está em negrito.
-* O elemento `<hr>` define uma barra horizontal.
-* O elemento `<button>` define um botão.
-* O elemento `<a>` define um link para alguma página.
-
-Repare que a maioria dos elementos HTML possuem uma tag de abertura e uma de fechamento, como `<title>` (que indica abertura) `</title>` (que indica fechamento). Mas existem excessões, como o elemento `<hr>`. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
-
 ### Criando Estilos da Apresentação no Jogo - HTML + CSS
 
 Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de um estilo CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata). Altere o arquivo chamado `index.html` dentro da pasta `page` e coloque o conteúdo do código abaixo.
@@ -156,7 +182,7 @@ Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da i
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jogo da Velha</title>
         <link rel="stylesheet" href="styles.css">
@@ -255,7 +281,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <title>Jogo da Velha</title>
         <link rel="stylesheet" href="styles.css">
@@ -372,7 +398,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <title>Jogo da Velha</title>
         <link rel="stylesheet" href="styles.css">
@@ -536,8 +562,8 @@ const padroesVitoria = [
     [0, 3, 6], //primeira coluna
     [1, 4, 7], //segunda coluna
     [2, 5, 8], //terceira coluna
-    [0, 4, 8], //diagnoal principal
-    [2, 4, 6]  //diagnoal secundária
+    [0, 4, 8], //diagonal principal
+    [2, 4, 6]  //diagonal secundária
 ];
 
 function verificaVencedor() {
@@ -621,7 +647,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <title>Jogo da Velha</title>
         <link rel="stylesheet" href="styles.css">
@@ -758,8 +784,8 @@ const padroesVitoria = [
     [0, 3, 6], //primeira coluna
     [1, 4, 7], //segunda coluna
     [2, 5, 8], //terceira coluna
-    [0, 4, 8], //diagnoal principal
-    [2, 4, 6]  //diagnoal secundária
+    [0, 4, 8], //diagonal principal
+    [2, 4, 6]  //diagonal secundária
 ];
 
 function verificaVencedor() {
@@ -863,7 +889,7 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ![Imagem Jogo 06](./docs/img_jogo6.png)
 
-## Publicando o Jogo no Github
+### Publicando o Jogo no Github
 
 Para publicar/postar o jogo desenvolvido no Github Pages, faça o seguinte.
 
@@ -871,10 +897,18 @@ Primeiramente, coloque o seu jogo no github. Depois vá em `Settings`. Clique em
 
 ![Publicando o Jogo no Github](./docs/postando-jogo-github.png)
 
-## Melhorias no Projeto do Jogo
+### Melhorias no Projeto do Jogo
 
 A seguir tem-se algumas sugestões de melhoria nesse projeto de jogo.
 
 * **Modos de Jogo Alternativos:** Além do modo tradicional de 3x3, adicione modos de jogo alternativos, como tabuleiros maiores (4x4, 5x5). Isso pode adicionar variedade e desafio ao jogo.
 * **Temas Visuais:** Implemente diferentes temas visuais para o tabuleiro do jogo da velha. Por exemplo, você pode ter temas como "Espaço", "Fantasia", "Subaquático", "Histórico", entre outros. Cada tema pode ter um conjunto de imagens de fundo e ícones de jogador correspondentes.
 * **Modo Torneio:** Implemente uma animação final para o jogador que vencer um total de 10 partidas. Essa animação deve conter algum pódio e um botão de reiniciar o torneio.
+
+## Créditos e Referências
+
+Para mais informações sobre comandos específicos faça os seguintes cursos:
+
+* [Curso de HTML da w3schools](https://www.w3schools.com/html/default.asp)
+* [Curso de CSS da w3schools](https://www.w3schools.com/css/default.asp)
+* [Curso de JavaScript da w3schools](https://www.w3schools.com/js/default.asp)
