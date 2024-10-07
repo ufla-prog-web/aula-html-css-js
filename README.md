@@ -40,6 +40,10 @@ A seguir estão listados os principais recursos utilizados no desenvolvimento de
 * CSS - Apresentação - [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
 * JavaScript - Comportamento - [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
 
+### Bibliotecas
+
+* jQuery - Biblioteca que Simplifica a Linguagem JavaScript - [link](https://jquery.com/)
+
 ### Ferramentas
 
 * Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
@@ -901,6 +905,153 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 ![Imagem Jogo 06](./docs/img_jogo6.png)
 
+### Incorporando jQuery no Jogo
+
+Para realizar a incorporação de jQuery no nosso código do jogo é necessário alterar o código do HTML. Faça a seguinte alteração para incorporação do código javascript da biblioteca jQuery na nossa página.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+    ...
+    <body>
+        ...
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> <!-- linha incluída -->
+        <script src="script.js"></script>
+    </body>
+</html>
+```
+
+Para realizar a incorporação de jQuery no nosso código do jogo não é necessário alterar o código do CSS.
+
+Para atualizar o código do JavaScript para suportar jQuery faça as seguintes alterações no código `scripts.js`:
+
+```javascript
+let jogoAtivo = true;
+let jogadorAtual = 'X';
+let tabuleiro = ['', '', '', '', '', '', '', '', ''];
+
+let qtdVitoriaX = 0;
+let qtdVitoriaO = 0;
+let qtdEmpate = 0;
+
+$('#imgX').css({opacity: 1.0, width: "150px"});
+$('#imgO').css({opacity: 0.2, width: "150px"});
+
+const padroesVitoria = [
+    [0, 1, 2], //primeira linha
+    [3, 4, 5], //segunda linha
+    [6, 7, 8], //terceira linha
+    [0, 3, 6], //primeira coluna
+    [1, 4, 7], //segunda coluna
+    [2, 5, 8], //terceira coluna
+    [0, 4, 8], //diagnoal principal
+    [2, 4, 6]  //diagnoal secundária
+];
+
+function verificaVencedor() {
+    for (let i = 0; i < padroesVitoria.length; i++) {
+        const [a, b, c] = padroesVitoria[i];
+        if (tabuleiro[a] && tabuleiro[a] == tabuleiro[b] && tabuleiro[a] == tabuleiro[c]) {
+            jogoAtivo = false;
+            return tabuleiro[a];
+        }
+    }
+    if (!tabuleiro.includes('')) {
+        jogoAtivo = false;
+        return 'empate';
+    }
+    return null;
+}
+
+function mostrarStatus() {
+    const vencedor = verificaVencedor();
+    if (vencedor) {
+        if (vencedor == 'empate') {
+            qtdEmpate++;
+            $('#status').text("Empate!");
+            $('#imgX').css({opacity: 1.0, width: "150px"});
+            $('#imgO').css({opacity: 1.0, width: "150px"});            
+            $('#qtdEmpate').text("Quantidade de Empate: " + qtdEmpate);
+        } else {
+            $('#status').text(`O Jogador ${vencedor} ganhou!`);
+            if (vencedor == 'X'){
+                qtdVitoriaX++;
+                $('#imgX').css({opacity: 1.0, width: "300px", transition: "width 1s ease"});
+                $('#imgO').css({opacity: 0.2});
+                $('#qtdVitoriaX').text("Quantidade de Vitória X: " + qtdVitoriaX);
+            }else {
+                qtdVitoriaO++;
+                $('#imgO').css({opacity: 1.0, width: "300px", transition: "width 1s ease"});
+                $('#imgX').css({opacity: 0.2});
+                $('#qtdVitoriaO').text("Quantidade de Vitória O: " + qtdVitoriaO);
+            }
+        }
+    } else {
+        $('#status').text(`É a vez do Jogador ${jogadorAtual}`);
+    }
+}
+
+function fazerMovimento(index) {
+    if (jogoAtivo && tabuleiro[index] == '') {
+        tabuleiro[index] = jogadorAtual;
+        $('.celula').eq(index).text(jogadorAtual);       
+        if (jogadorAtual == 'X'){
+            $('.celula').eq(index).css('color', '#FD0');
+            $('#imgO').css({opacity: 1.0});
+            $('#imgX').css({opacity: 0.2});            
+        } else {
+            $('.celula').eq(index).css('color', '#F44');
+            $('#imgX').css({opacity: 1.0});
+            $('#imgO').css({opacity: 0.2});
+        }
+        jogadorAtual = jogadorAtual == 'X' ? 'O' : 'X';
+        mostrarStatus();
+    }
+}
+
+function reiniciarJogo() {
+    jogoAtivo = true;
+    jogadorAtual = 'X';
+    tabuleiro = ['', '', '', '', '', '', '', '', ''];
+
+    $('#imgX').css({opacity: 1.0, width: "150px"});
+    $('#imgO').css({opacity: 0.2, width: "150px"});
+    $('.celula').text('');
+
+    mostrarStatus();
+}
+
+mostrarStatus();
+```
+
+Explicando o código jQuery:
+
+* `$('#imgX').css({opacity: 1.0, width: "150px"});`: Isso seleciona o elemento com o ID imgX e define suas propriedades CSS. Nesse caso, define a opacidade como 1.0 (totalmente visível) e a largura como 150 pixels.
+    * Subistituí as linhas javascript:
+        * `document.getElementById('imgX').style.opacity = 1.0;`
+        * `document.getElementById('imgX').style.width = "150px";`
+* `$('#status').text("Empate!");`: Seleciona o elemento com o ID status e define seu texto como "Empate!". Isso é útil para atualizar o status do jogo no elemento correspondente.
+    * Subistituí a linha javascript:
+        * `document.getElementById('status').textContent = "Empate!";`
+* `$('#qtdEmpate').text("Quantidade de Empate: " + qtdEmpate);`: Seleciona o elemento com o ID qtdEmpate e define seu texto como "Quantidade de Empate: " concatenado com o valor da variável qtdEmpate. Isso é usado para atualizar o contador de empates no elemento correspondente.
+    * Subistituí a linha javascript:
+        * `document.getElementById('qtdEmpate').textContent = "Quantidade de Empate:     " + qtdEmpate;`
+* `$('.celula').eq(index).text(jogadorAtual);`: Seleciona todos os elementos com a classe celula, e então escolhe o elemento na posição index (baseado no índice) dentro desse conjunto de elementos. Depois, define o texto desse elemento como o valor da variável jogadorAtual. Isso é usado para preencher a célula do tabuleiro com o símbolo do jogador atual.
+    * Subistituí a linha javascript:
+        * `document.getElementsByClassName('celula')[index].textContent = jogadorAtual;`
+* `$('.celula').eq(index).css('color', '#FD0');`: Similar à linha anterior, isso seleciona a célula específica com base no índice index e define sua cor de texto como amarelo (#FD0).
+    * Subistituí as linhas javascript:
+* `$('.celula').text('');`: Essa linha de código é usada para limpar o conteúdo de todos os elementos que possuem a classe CSS "celula", utilizada quando se deseja reiniciar o jogo.
+    * Subistituí as linhas javascript:
+        * `const celulas = document.getElementsByClassName('celula');`
+        * `for (let i = 0; i < celulas.length; i++) {`
+        * `    celulas[i].textContent = '';`
+        * `}`
+
+Para mais informações, consulte [https://jquery.com/](https://jquery.com/).
+
+Para mais informações, faça o curso [jQuery da w3schools](https://www.w3schools.com/jquery/default.asp).
+
 ### Publicando o Jogo no Github
 
 Para publicar/postar o jogo desenvolvido no Github Pages, faça o seguinte.
@@ -927,8 +1078,9 @@ Com o conhecimento obtido até aqui de HTML, CSS e JavaScript implemente os segu
 
 ## Créditos e Referências
 
-Para mais informações sobre comandos específicos de HTML, CSS e JavaScript, faça os seguintes cursos:
+Para mais informações sobre comandos específicos de HTML, CSS, JavaScript e jQuery, faça os seguintes cursos:
 
 * [Curso de HTML da w3schools](https://www.w3schools.com/html/default.asp)
 * [Curso de CSS da w3schools](https://www.w3schools.com/css/default.asp)
 * [Curso de JavaScript da w3schools](https://www.w3schools.com/js/default.asp)
+* [Curso de jQuery da w3schools](https://www.w3schools.com/jquery/default.asp)
