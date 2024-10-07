@@ -19,6 +19,7 @@
 * [Fundamentos Teóricos](#fundamentos-teóricos)
 * [Objetivo da Aula](#objetivo-da-aula)
 * [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
+* [Desenvolva Novos Projetos](#desenvolva-novos-projetos)
 * [Créditos e Referências](#créditos-e-referências)
 
 ## Introdução
@@ -27,7 +28,7 @@ Aula de introdução ao HTML, CSS e JavaScript. Projeto usado para fazer uma int
 
 O objetivo desse projeto é criar um jogo da velha completo que tenha dois personagens que o jogam. Uma pequena animação deve ser feita a cada vez que um jogador fizer sua jogada. O jogo contém também um histórico dos status final dos jogos anteriores.
 
-A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possa compreender como as diferentes tecnologias se conectam.
+A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possam compreender como as diferentes tecnologias HTML, CSS e JavaScript se conectam.
 
 ## Recursos Utilizados
 
@@ -44,6 +45,8 @@ A seguir estão listados os principais recursos utilizados no desenvolvimento de
 * Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
 * Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
 * Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
+* Live Server (Extensão VS Code) - Servidor Web - [link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+* http.server - Servidor Web - [link](https://docs.python.org/3/library/http.server.html)
 
 ## Fundamentos Teóricos
 
@@ -68,6 +71,8 @@ O objetivo da aula é apresentar uma introdução ao HTML, CSS e JavaScript. Ess
 A animação abaixo mostra de forma visual o resultado esperado após a execução dos passos desta aula.
 
 ![Objetivo da Aula](./docs/objetivo_jogo.gif)
+
+[Link - Jogo Online](https://ufla-prog-web.github.io/aula-html-css-js/page/)
 
 ## Desenvolvimento do Projeto
 
@@ -95,7 +100,7 @@ Abra o IDE Visual Studio Code na pasta `aula-html-css-js`.
 
 O desenvolvimento de qualquer página web inicia-se com a estrutura da página em HTML. Nessa etapa nos preocupamos com a organização (estrutura) da página e não com a apresentação.
 
-Crie um arquivo chamado `index.html` dentro da pasta `page` e copie e cole nesse arquivo o código abaixo.
+Crie uma pasta chamada `code` na raiz do projeto `aula-html-css-js`. Crie um arquivo chamado `index.html` dentro da pasta `code` e copie e cole nesse arquivo o código abaixo.
 
 ```html
 <!DOCTYPE html>
@@ -110,7 +115,7 @@ Crie um arquivo chamado `index.html` dentro da pasta `page` e copie e cole nesse
             <img src="img_logo.png" alt="Logo Jogo da Velha" width="100" height="100">
             <p>Bem-vindo ao nosso emocionante <b>Jogo da Velha</b>!</p>
             <hr>
-            <!-- Abaixo temos os campos necessários ao jogo (isso é um comentário -->
+            <!-- Abaixo temos os campos necessários ao jogo (isso é um comentário) -->
             <div>
                 <div></div>
                 <div></div>
@@ -139,6 +144,7 @@ A seguir temos algumas explicações sobre o código HTML:
 * A declaração `<!DOCTYPE html>` define que este documento é um documento HTML5.
 * O elemento `<html>` é o elemento raiz de uma página HTML.
 * O elemento `<head>` contém meta informações sobre a página HTML.
+* O elemento `<meta>` define o sistema de codificação utilizado na página HTML.
 * O elemento `<title>` especifica um título para a página HTML.
 * O elemento `<body>` define o corpo do documento.
 * O elemento `<div>` define define uma divisão lógica no layout da página.
@@ -152,23 +158,25 @@ A seguir temos algumas explicações sobre o código HTML:
 
 Repare que a maioria dos elementos HTML possuem uma tag de abertura e uma de fechamento, como `<title>` (que indica abertura) `</title>` (que indica fechamento). Mas existem excessões, como o elemento `<hr>`. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
 
+Copie o arquivo `img_logo.png` da pasta `page` para a pasta `code`.
+
 ### Executando a Aplicação Web
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. Você pode abrir o arquivo html como se fosse um arquivo ou então mandar um servidor web prover essa página (botão direito no arquivo e clicar em `Open with Live Server`). Se não tiver a extensão do Live Server instalada no seu Visual Studio Code, instale-a. Uma outra forma é iniciando um servidor web no diretório que contém o arquivo `index.html`. Execute o comando abaixo.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. Você pode abrir o arquivo html como se fosse um arquivo ou então mandar um servidor web prover essa página (clicar com o botão direito no arquivo e clicar em `Open with Live Server`). Se não tiver a extensão do Live Server instalada no seu Visual Studio Code, instale-a. Uma outra forma é iniciando um servidor web no diretório que contém o arquivo `index.html`. Execute o comando abaixo.
 
 ```bash
-cd page
+cd code
 python3 -m http.server
 ```
 
 Para trocar a porta utilizada, execute o comando abaixo:
 
 ```bash
-cd page
+cd code
 python3 -m http.server 8123
 ```
 
-A página exibida deverá ser parecer com a imagem abaixo.
+A página exibida deverá si parecer com a imagem abaixo.
 
 ![Imagem Jogo 01](./docs/img_jogo1.png)
 
@@ -176,7 +184,7 @@ Repare que a página web está bem simples e "feia" esteticamente, posteriorment
 
 ### Criando Estilos da Apresentação no Jogo - HTML + CSS
 
-Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de um estilo CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata). Altere o arquivo chamado `index.html` dentro da pasta `page` e coloque o conteúdo do código abaixo.
+Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de um estilo CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata). Altere o arquivo chamado `index.html` dentro da pasta `code` e coloque o conteúdo do código abaixo.
 
 ```html
 <!DOCTYPE html>
@@ -219,12 +227,12 @@ Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da i
 A seguir temos algumas explicações sobre as atualizações do código HTML:
 
 * O atributo `lang` dentro do elemento `<html>` é usado para definir o idioma principal do conteúdo da página, nesse caso "pt-BR" indica o Português Brasileiro. Isso é utilizado para acessibilidade, internacionalização e motores de busca.
-* O elemento `<meta charset="UTF-8">` especifica o conjunto de caracteres utilizado para interpretar e exibir o conteúdo textual da página web.
+* O elemento `<meta charset="utf-8">` especifica o conjunto de caracteres utilizado para interpretar e exibir o conteúdo textual da página web.
 * O elemento `<meta name="viewport" content="width=device-width, initial-scale=1.0">` é usado para controlar como a página é exibida em dispositivos móveis, ajustando a largura e a escala inicial da viewport (a área visível da página em um navegador).
 * O elemento `<link>` é usado para vincular recursos externos, como folhas de estilo CSS, ao documento HTML. Quando você usa `<link rel="stylesheet" href="styles.css">`, está basicamente dizendo ao navegador para carregar o arquivo "styles.css" e aplicar suas regras de estilo ao documento HTML atual.
 * O atributo `class` dentro do elemento `<div class="nome_da_classe">` é usado para associar um ou mais nomes de classes a um elemento HTML. As classes são usadas principalmente para associar um elemento com regras de estilo em um arquivo de folha de estilo CSS externo ou interno, ou para selecionar e manipular elementos com JavaScript.
 
-Em seguida, crie um arquivo chamado `styles.css` dentro da pasta `page` e copie e cole nesse arquivo o código abaixo.
+Em seguida, crie um arquivo chamado `styles.css` dentro da pasta `code` e copie e cole nesse arquivo o código abaixo.
 
 ```css
 .conteiner {
@@ -267,9 +275,11 @@ A seguir temos algumas explicações sobre o código CSS:
   * `background-color: darkgray;`: Define a cor de fundo das células como cinza escuro.
   * `cursor: pointer;`: Define o cursor do mouse como um ponteiro ao passar sobre as células, indicando que elas são interativas.
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá ser parecer com a imagem abaixo.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
 
 ![Imagem Jogo 02](./docs/img_jogo2.png)
+
+Repare que a página web está como uma aparência mais agradável, isso graças ao CSS incluído no arquivo HTML.
 
 ### Melhorando a Visualização do Jogo - HTML + CSS
 
@@ -382,15 +392,15 @@ A seguir temos algumas explicações sobre as atualizações do código CSS:
 * O seletor `button:hover` é usado para aplicar estilos aos elementos `<button>` quando o cursor do mouse está sobre eles (quando estão em estado de hover).
     * `background-color: #17D;`: Esta regra define a cor de fundo dos botões quando o cursor do mouse está sobre eles. A cor de fundo é definida como "#17D", que é uma cor azul mais escura em formato hexadecimal.
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá ser parecer com a imagem abaixo.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
 
 ![Imagem Jogo 03](./docs/img_jogo3.png)
 
-Repare que até esse passo ao clicar no tabuleiro nenhuma jogada é efetuada. Iremos agora dar comportamento a nossa página.
+Repare que até esse passo, ao clicar no tabuleiro nenhuma jogada é efetuada. Iremos agora dar comportamentos a nossa página.
 
 ### Incorporando Interatividade com o Jogo - HTML + CSS + JS
 
-Nessa etapa, iremos criar interatividade com o nosso jogo através da incorporação de códigos JavaScript. Para isso iremos atualizar o HTML e o CSS da página, além de criar um código JavaScript. No HTML iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS iremos estilizar a célula um pouco mais. No JavaScript iremos permitir fazer jogadas e permitir reiniciar o jogo.
+Nessa etapa, iremos criar interatividade com o nosso jogo através da incorporação de códigos JavaScript. Para isso, iremos atualizar o HTML e o CSS da página, além de criar um código JavaScript. No HTML, iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS, iremos estilizar a célula um pouco mais. No JavaScript, iremos permitir fazer jogadas e permitir reiniciar o jogo.
 
 Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 
@@ -443,7 +453,7 @@ A seguir temos algumas explicações sobre as atualizações do código HTML:
 * O elemento `<button>`  agora ouve um evento de click `onclick="reiniciarJogo()`. Ao receber um click do mouse (botão esquerdo) o método do JavaScript chamado `reiniciarJogo` é chamado sem nenhum parâmetro.
 * O elemento `<script>`, no final do arquivo, carrega um arquivo JavaScript chamado `script.js`.
 
-Atualize o código do arquivo `styles.css` dentro da página `page` para que a `celula` tenha mais alguns atributos. Assim esse código da célula deve se parecer com o código abaixo:
+Atualize o código do arquivo `styles.css` dentro da página `code` para que a `celula` tenha mais alguns atributos. Assim esse código da célula deve se parecer com o código abaixo:
 
 ```css
 ...
@@ -472,7 +482,7 @@ A seguir temos algumas explicações sobre as atualizações do código CSS:
     * `font-size: 90px;`: Esta regra define o tamanho da fonte dos elementos com a classe "celula" como 90 pixels.
     * `font-weight: bold;`: Esta regra define o estilo da fonte como negrito para os elementos com a classe "celula".
 
-Crie um arquivo chamado `script.js` dentro da pasta `page` e copie e cole nesse arquivo o código abaixo.
+Crie um arquivo chamado `script.js` dentro da pasta `code` e copie e cole nesse arquivo o código abaixo.
 
 ```javascript
 let jogadorAtual = 'X';
@@ -511,7 +521,7 @@ O que é o DOM? O DOM trata da modelagem de todo o HTML. O DOM é como uma árvo
 
 Fonte: [https://en.wikipedia.org/wiki/Document_Object_Model](https://en.wikipedia.org/wiki/Document_Object_Model)
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá ser parecer com a imagem abaixo.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
 
 ![Imagem Jogo 04](./docs/img_jogo4.png)
 
@@ -534,7 +544,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo destacado abaixo.
     <body>
         <div class="conteiner">
             ...
-            <p id="status"></p> <!--Acrescentar essa linha apenas antes do botão-->
+            <p id="status"></p> <!--Acrescentar apenas essa linha antes do botão-->
             <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
             ...
         </div>
@@ -544,11 +554,11 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo destacado abaixo.
 
 A seguir temos algumas explicações sobre as atualizações do código HTML:
 
-* Um elemento `<p>` com o atributo id igual a "status" foi criado. Nesse elemento iremos escrever algumas informações do status atual do jogo. Repare que esse parágrafo inicialmente está vazio. O JavaScript é quem irá alimentar o conteúdo exibido.
+* Um elemento `<p>` com o atributo id igual a "status" foi criado. Nesse elemento, iremos escrever algumas informações do status atual do jogo. Repare que esse parágrafo inicialmente está vazio. O JavaScript é quem irá alimentar o conteúdo a ser exibido.
 
-OBS: O arquivo CSS não foi alterado.
+**OBS**: O arquivo CSS não precisa ser alterado nessa etapa.
 
-Altere o conteúdo do arquivo `script.js` dentro da pasta `page` para o seguinte código.
+Altere o conteúdo do arquivo `script.js` dentro da pasta `code` para o seguinte código.
 
 ```javascript
 let jogoAtivo = true;
@@ -628,11 +638,11 @@ A seguir temos algumas explicações sobre as atualizações do código JavaScri
 * `jogoAtivo`: Uma variável booleana que indica se o jogo está ativo ou não.
 * `padroesVitoria`: Uma matriz que define os padrões de vitória no jogo da velha. Cada subarray representa uma linha, coluna ou diagonal no tabuleiro onde um jogador pode ganhar.
 * `verificaVencedor()`: Uma função que verifica se um jogador ganhou o jogo ou se houve um empate.
-`mostrarStatus()`: Uma função que atualiza o elemento HTML com o status atual do jogo (quem está ganhando, se houve um empate ou de quem é a vez de jogar).
+* `mostrarStatus()`: Uma função que atualiza o elemento HTML com o status atual do jogo (quem está ganhando, se houve um empate ou de quem é a vez de jogar).
 * `fazerMovimento(index)`: Uma função chamada quando um jogador faz um movimento clicando em uma célula do tabuleiro. Esta função verifica se o movimento é válido, atualiza o estado do tabuleiro, muda o jogador atual e atualiza o status do jogo.
 * `reiniciarJogo()`: Uma função chamada para reiniciar o jogo, redefinindo todas as variáveis para seus valores iniciais e limpando o tabuleiro.
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá ser parecer com a imagem abaixo.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
 
 ![Imagem Jogo 05](./docs/img_jogo5.png)
 
@@ -711,6 +721,8 @@ A seguir temos algumas explicações sobre as atualizações do código HTML:
 * `<img id="imgX" class="img_personagem" src="img_mario.gif" alt="Mario" width="150" height="200">` e `<img id="imgO" class="img_personagem" src="img_luigi.gif" alt="Mario" width="150" height="200">`: Estas são imagens dos personagens do jogo (Mario e Luigi). Cada imagem tem um ID específico (imgX e imgO) e uma classe (img_personagem) para estilização CSS específica.
 * `<p id="qtdVitoriaX">Quantidade de Vitória X: 0</p>`, `<p id="qtdVitoriaO">Quantidade de Vitória O: 0</p>` e `<p id="qtdEmpate">Quantidade de Empate: 0</p>`: Estes são parágrafos com IDs específicos (qtdVitoriaX, qtdVitoriaO e qtdEmpate) que serão usados para exibir estatísticas do jogo, como a quantidade de vitórias para cada jogador e a quantidade de empates através da manipulação via JavaScript.
 
+Copie os arquivos `img_mario.gif` e `img_luigi.gif` da pasta `page` para a pasta `code`.
+
 Adicione ao final do arquivo `styles.css` o conteúdo CSS exibido abaixo:
 
 ```css
@@ -761,7 +773,7 @@ A seguir temos algumas explicações sobre as atualizações do código CSS:
     * `color: #F44;`: define a cor do texto como vermelho (#F44) para o elemento com o ID marcadorO.
     * `margin: 20px;`: define uma margem de 20 pixels ao redor do elemento com o ID marcadorO.
 
-Altere o conteúdo do arquivo `script.js` dentro da pasta `page` para o seguinte código.
+Altere o conteúdo do arquivo `script.js` dentro da pasta `code` para o seguinte código.
 
 ```javascript
 let jogoAtivo = true;
@@ -885,7 +897,7 @@ A seguir temos algumas explicações de algumas linhas isoladas do código JavaS
 * `document.getElementById('imgX').style.transition = "width 1s ease";`: Esta linha adiciona uma transição de animação à mudança de largura da imagem com o ID imgX. A largura mudará durante um período de 1 segundo, usando uma função de transição "ease" (suavização).
 * `document.getElementsByClassName('celula')[index].style.color = "#FD0";`: Aqui, o texto da célula correspondente ao índice especificado é definido como amarelo (#FD0).
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá ser parecer com a imagem abaixo.
+Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
 
 ![Imagem Jogo 06](./docs/img_jogo6.png)
 
@@ -893,7 +905,7 @@ Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A págin
 
 Para publicar/postar o jogo desenvolvido no Github Pages, faça o seguinte.
 
-Primeiramente, coloque o seu jogo no github. Depois vá em `Settings`. Clique em `Pages`. Na parte de `Build and deployment` e em `Branch`, selecione o branch `main` e clique em `Save`.
+Primeiramente, coloque o seu jogo no github. Depois, vá em `Settings` (no Github). Clique em `Pages`. Na parte de `Build and deployment` e em `Branch`, selecione o branch `main` e clique em `Save`.
 
 ![Publicando o Jogo no Github](./docs/postando-jogo-github.png)
 
@@ -901,13 +913,21 @@ Primeiramente, coloque o seu jogo no github. Depois vá em `Settings`. Clique em
 
 A seguir tem-se algumas sugestões de melhoria nesse projeto de jogo.
 
-* **Modos de Jogo Alternativos:** Além do modo tradicional de 3x3, adicione modos de jogo alternativos, como tabuleiros maiores (4x4, 5x5). Isso pode adicionar variedade e desafio ao jogo.
+* **Modos de Jogo Alternativos:** Além do modo tradicional de 3x3, adicione outros modos de jogo alternativos, como tabuleiros maiores (4x4 ou 5x5). Isso pode adicionar variedade e desafio ao jogo.
 * **Temas Visuais:** Implemente diferentes temas visuais para o tabuleiro do jogo da velha. Por exemplo, você pode ter temas como "Espaço", "Fantasia", "Subaquático", "Histórico", entre outros. Cada tema pode ter um conjunto de imagens de fundo e ícones de jogador correspondentes.
 * **Modo Torneio:** Implemente uma animação final para o jogador que vencer um total de 10 partidas. Essa animação deve conter algum pódio e um botão de reiniciar o torneio.
 
+## Desenvolva Novos Projetos
+
+Com o conhecimento obtido até aqui de HTML, CSS e JavaScript implemente os seguintes projetos de forma a treinar o conhecimento:
+			
+* Desenvolva uma página pessoal.
+* Desenvolva uma calculadora.
+* Desenvolva um jogo da memória.
+
 ## Créditos e Referências
 
-Para mais informações sobre comandos específicos faça os seguintes cursos:
+Para mais informações sobre comandos específicos de HTML, CSS e JavaScript, faça os seguintes cursos:
 
 * [Curso de HTML da w3schools](https://www.w3schools.com/html/default.asp)
 * [Curso de CSS da w3schools](https://www.w3schools.com/css/default.asp)
