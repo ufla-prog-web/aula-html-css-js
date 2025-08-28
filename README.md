@@ -24,39 +24,73 @@
 
 ## Introdução
 
-Aula de introdução ao HTML, CSS e JavaScript. Projeto usado para fazer uma introdução a camada de apresentação para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA).
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-O objetivo desse projeto é criar um jogo da velha completo que tenha dois personagens que o jogam. Uma pequena animação deve ser feita a cada vez que um jogador fizer sua jogada. O jogo contém também um histórico dos status final dos jogos anteriores.
+O objetivo deste tutorial é introduzir os conceitos fundamentais de HTML, CSS e JavaScript por meio do desenvolvimento de um projeto completo, que servirá como exemplo prático da camada de apresentação. Esse projeto será utilizado na disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA).
 
-A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possam compreender como as diferentes tecnologias HTML, CSS e JavaScript se conectam.
+O projeto proposto consiste na criação de um jogo da velha interativo, com dois personagens que disputam entre si. A cada jogada, uma pequena animação será exibida, tornando a experiência mais dinâmica. Além disso, o jogo registrará o histórico dos resultados das partidas anteriores.
+
+A aula está organizada no formato de tutorial, permitindo que cada estudante replique em seu computador os conceitos e recursos apresentados. O código será desenvolvido gradualmente, de modo a evidenciar a evolução da solução e facilitar a compreensão de como as tecnologias HTML, CSS e JavaScript se integram na construção de aplicações web.
 
 ## Recursos Utilizados
 
-A seguir estão listados os principais recursos utilizados no desenvolvimento desta aula.
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+
+A seguir estão listados os principais recursos empregados no desenvolvimento desta aula.
 
 ### Linguagens
 
-* HTML - Estrutura - [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
-* CSS - Apresentação - [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
-* JavaScript - Comportamento - [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
+* HTML - Responsável pela estrutura do conteúdo - [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
+* CSS - Responsável pela apresentação visual - [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
+* JavaScript - Responsável pelo comportamento e interatividade - [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
 
 ### Bibliotecas
 
-* jQuery - Biblioteca que Simplifica a Linguagem JavaScript - [link](https://jquery.com/)
+* jQuery - Biblioteca que simplifica a manipulação do JavaScript - [link site oficial](https://jquery.com/) - [link do curso da w3schools](https://www.w3schools.com/jquery/default.asp)
 
 ### Ferramentas
 
-* Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
-* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
-* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
-* Live Server (Extensão VS Code) - Servidor Web - [link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-* http.server - Servidor Web - [link](https://docs.python.org/3/library/http.server.html)
+* Visual Studio Code - Ambiente de Desenvolvimento Integrado - [link](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão - [link](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software - [link](https://github.com/)
+* Live Server (Extensão VS Code) - Servidor web para desenvolvimento local - [link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+* http.server - Servidor web simples incluso na biblioteca padrão do Python - [link](https://docs.python.org/3/library/http.server.html)
 
 ## Fundamentos Teóricos
 
-### Arquitetura Web
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Arquitetura Geral das Aplicação Web
+### Arquitetura Web de Três Camadas
+
+A arquitetura web de três camadas é um padrão de design de software que organiza uma aplicação em três níveis distintos, cada um com responsabilidades bem definidas. Essas camadas são:
+
+**1. Camada de Apresentação (Frontend)**:
+
+* Também chamada de interface de usuário, essa camada é responsável pela interação com o usuário. Ela inclui tudo o que o usuário vê e utiliza para interagir com o sistema, como páginas web, formulários, botões, e elementos visuais em geral.
+* Aqui, são usados tecnologias como HTML, CSS, JavaScript e frameworks frontend (React, Angular, etc.).
+* A camada de apresentação envia as entradas dos usuários para a camada de negócios e exibe os resultados de volta para o usuário.
+
+**2. Camada de Negócios (Lógica da Aplicação - Backend)**:
+
+* Nessa camada está a lógica de negócios da aplicação, ou seja, as regras que governam como os dados devem ser processados e as operações que devem ser realizadas. Ela trata os pedidos recebidos da camada de apresentação e executa as operações necessárias.
+* Essa camada pode incluir validações, cálculos e chamadas ao banco de dados. Em termos de tecnologia, é geralmente desenvolvida com linguagens de programação como Python, Java, PHP, ou frameworks como Django, Spring Boot, Laravel, etc.
+
+**3. Camada de Dados (Banco de Dados - Backend)**:
+
+* A camada de dados gerencia o armazenamento e recuperação de dados em um banco de dados. Ela é responsável pela persistência dos dados e operações como criar, ler, atualizar e deletar (CRUD).
+* Geralmente, são usados sistemas de gerenciamento de banco de dados relacionais (como MySQL, PostgreSQL) ou não relacionais (como MongoDB).
+* A camada de negócios interage com essa camada para armazenar e buscar dados conforme necessário.
+
+**Fluxo da Arquitetura de Três Camadas**:
+
+* O usuário interage com a Camada de Apresentação.
+* A Camada de Apresentação faz requisições para a Camada de Negócios.
+* A Camada de Negócios processa a lógica e, se necessário, interage com a Camada de Dados.
+* A Camada de Dados responde com os dados necessários para a Camada de Negócios.
+* A Camada de Negócios retorna os resultados processados para a Camada de Apresentação.
+* A Camada de Apresentação exibe os resultados para o usuário.
+
+Essa separação facilita a manutenção e escalabilidade da aplicação, permitindo que cada camada possa ser modificada ou melhorada de forma independente.
 
 ![Arquitetura das Aplicações Web](./docs/arquitetura-web.png)
 
@@ -70,9 +104,11 @@ Fonte: [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://
 
 ## Objetivo da Aula
 
-O objetivo da aula é apresentar uma introdução ao HTML, CSS e JavaScript. Esses conceitos são abordados durante o desenvolvimento de um jogo da velha temático.
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-A animação abaixo mostra de forma visual o resultado esperado após a execução dos passos desta aula.
+O objetivo desta aula é oferecer uma introdução aos conceitos de HTML, CSS e JavaScript, aplicados de forma prática no desenvolvimento de um jogo da velha temático.
+
+A animação apresentada a seguir ilustra, de maneira visual, o resultado esperado após a implementação dos passos descritos ao longo da aula.
 
 ![Objetivo da Aula](./docs/objetivo_jogo.gif)
 
@@ -80,11 +116,13 @@ A animação abaixo mostra de forma visual o resultado esperado após a execuç�
 
 ## Desenvolvimento do Projeto
 
-Os passos a seguir devem ser seguidos para conseguir alcançar o objetivo estabelecido - desenvolver o Jogo da Velha Temático.
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+
+Siga os passos abaixo para alcançar o objetivo proposto: desenvolver o **Jogo da Velha Temático**.
 
 ### Clonando o Repositório
 
-Inicialmente, clone o repositório da seguinte forma:
+Para iniciar, faça o clone do repositório com o seguinte comando:
 
 ```bash
 git clone https://github.com/ufla-prog-web/aula-html-css-js.git
@@ -92,19 +130,21 @@ git clone https://github.com/ufla-prog-web/aula-html-css-js.git
 
 ### Baixando o Repositório
 
-Caso deseje ao invês de clonar o repositório (método acima), baixe o repositório do [link](https://github.com/ufla-prog-web/aula-html-css-js) clicando em `Code` e `Download ZIP`.
+Como alternativa ao clone, você pode baixar diretamente o repositório acessando este [link](https://github.com/ufla-prog-web/aula-html-css-js). Clique em `Code` e, em seguida, em `Download ZIP`.
 
 ### Abrindo o Visual Studio Code
 
-Abra o IDE Visual Studio Code na pasta `aula-html-css-js`.
+Abra o Visual Studio Code (VS Code) na pasta `aula-html-css-js`.
 
-**Dica:** Abra o arquivo `README.md` e clique em `Open Preview to the Side` para facilitar a construção da aplicação.
+**Dica:** abra o arquivo `README.md` e selecione a opção `Open Preview to the Side` para visualizar o tutorial lado a lado enquanto desenvolve a aplicação.
 
 ### Criando a Estrutura do Jogo - HTML
 
-O desenvolvimento de qualquer página web inicia-se com a estrutura da página em HTML. Nessa etapa nos preocupamos com a organização (estrutura) da página e não com a apresentação.
+O desenvolvimento de qualquer página web inicia-se pela definição de sua estrutura em HTML. Nesta etapa, o foco está na organização do conteúdo da página, e não em sua aparência visual.
 
-Crie uma pasta chamada `code` na raiz do projeto `aula-html-css-js`. Crie um arquivo chamado `index.html` dentro da pasta `code` e copie e cole nesse arquivo o código abaixo.
+**Criando o HTML**
+
+Crie uma pasta chamada `code` na raiz do projeto `aula-html-css-js`. Em seguida, crie dentro dela um arquivo chamado `index.html` e copie o código a seguir:
 
 ```html
 <!DOCTYPE html>
@@ -137,58 +177,69 @@ Crie uma pasta chamada `code` na raiz do projeto `aula-html-css-js`. Crie um arq
                 <a href="https://pt.wikipedia.org/wiki/Jogo_da_velha" target="_blank">Wikipedia</a>
             </p>
             <p><b>Desenvolvido por:</b> Turma GAC116</p>
-            <p><b>Copyright:</b> 2024</p>
+            <p><b>Copyright:</b> 2025</p>
         </div>
     </body>
 </html>
 ```
 
-A seguir temos algumas explicações sobre o código HTML:
+**Explicação sobre o código HTML**
 
-* A declaração `<!DOCTYPE html>` define que este documento é um documento HTML5.
-* O elemento `<html>` é o elemento raiz de uma página HTML.
-* O elemento `<head>` contém meta informações sobre a página HTML.
-* O elemento `<meta>` define o sistema de codificação utilizado na página HTML.
-* O elemento `<title>` especifica um título para a página HTML.
-* O elemento `<body>` define o corpo do documento.
-* O elemento `<div>` define define uma divisão lógica no layout da página.
-* O elemento `<h1>` define um título grande.
-* O elemento `<img>` define uma imagem a ser exibida.
-* O elemento `<p>` define um parágrafo.
-* O elemento `<b>` define que o texto está em negrito.
-* O elemento `<hr>` define uma barra horizontal.
-* O elemento `<button>` define um botão.
-* O elemento `<a>` define um link para alguma página.
+* `<!DOCTYPE html>` → define que o documento segue o padrão HTML5.
+* `<html>` → elemento raiz de toda página HTML.
+* `<head>` → contém informações sobre a página, como metadados e título.
+* `<meta>` → define a codificação de caracteres utilizada.
+* `<title>` → define o título exibido na aba do navegador.
+* `<body>` → representa o corpo do documento.
+* `<div>` → cria uma divisão lógica no layout da página.
+* `<h1>` → define um título grande.
+* `<img>` → insere uma imagem.
+* `<p>` → representa um parágrafo de texto.
+* `<b>` → exibe o texto em negrito.
+* `<hr>` → insere uma barra horizontal.
+* `<button>` → cria um botão interativo.
+* `<a>` → define um hiperlink para outra página ou recurso.
 
-Repare que a maioria dos elementos HTML possuem uma tag de abertura e uma de fechamento, como `<title>` (que indica abertura) `</title>` (que indica fechamento). Mas existem excessões, como o elemento `<hr>`. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
+Observe que a maioria dos elementos HTML possui uma tag de abertura e uma tag de fechamento, como `<title>` e `</title>`. Entretanto, existem algumas exceções, como `<hr>`, que não possuem fechamento. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
 
-Copie o arquivo `img_logo.png` da pasta `page` para a pasta `code`.
+Por fim, copie o arquivo `img_logo.png` da pasta `page` para a pasta `code`.
 
 ### Executando a Aplicação Web
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. Você pode abrir o arquivo html como se fosse um arquivo ou então mandar um servidor web prover essa página (clicar com o botão direito no arquivo e clicar em `Open with Live Server`). Se não tiver a extensão do Live Server instalada no seu Visual Studio Code, instale-a. Uma outra forma é iniciando um servidor web no diretório que contém o arquivo `index.html`. Execute o comando abaixo.
+Abra o arquivo `index.html` em um navegador para visualizar o conteúdo da página. Isso pode ser feito de duas maneiras:
 
-```bash
-cd code
-python3 -m http.server
-```
+1. Acessando diretamente o arquivo:
+    * Abra o arquivo HTML como faria com qualquer outro arquivo do seu computador.
+2. Utilizando um servidor web local:
+    * Se você possui a extensão Live Server instalada no Visual Studio Code, clique com o botão direito no arquivo e selecione `Open with Live Server`.
+    * Caso não tenha a extensão instalada, é recomendável instalá-la, pois ela facilita o desenvolvimento.
+    * Outra alternativa é iniciar manualmente um servidor web no diretório que contém o arquivo `index.html`. Para isso, execute o comando abaixo:
 
-Para trocar a porta utilizada, execute o comando abaixo:
+        ```bash
+        cd code
+        python3 -m http.server
+        ```
 
-```bash
-cd code
-python3 -m http.server 8123
-```
+        Se desejar utilizar uma porta específica (por exemplo, 8123), execute:
 
-A página exibida deverá si parecer com a imagem abaixo.
+        ```bash
+        cd code
+        python3 -m http.server 8123
+        ```
+
+Após iniciar o servidor, abra o navegador e acesse a página. O resultado deverá se assemelhar à imagem abaixo:
 
 ![Imagem Jogo 01](./docs/img_jogo1.png)
 
-Repare que a página web está bem simples e "feia" esteticamente, posteriormente arrumaremos isso.
+Note que, neste momento, a página ainda está simples e com aparência pouco atrativa. Nas próximas etapas, trabalharemos o estilo para deixá-la mais organizada e visualmente agradável.
 
 ### Criando Estilos da Apresentação no Jogo - HTML + CSS
 
-Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de um estilo CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata). Altere o arquivo chamado `index.html` dentro da pasta `code` e coloque o conteúdo do código abaixo.
+Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de estilos em CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata).
+
+**Atualizando o HTML**
+
+Altere o arquivo `index.html`, localizado na pasta `code`, substituindo seu conteúdo pelo código abaixo:
 
 ```html
 <!DOCTYPE html>
@@ -222,21 +273,23 @@ Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da i
                 <a href="https://pt.wikipedia.org/wiki/Jogo_da_velha" target="_blank">Wikipedia</a>
             </p>
             <p><b>Desenvolvido por:</b> Turma GAC116</p>
-            <p><b>Copyright:</b> 2024</p>
+            <p><b>Copyright:</b> 2025</p>
         </div>
     </body>
 </html>
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código HTML:
+**Explicação sobre as alterações no HTML**
 
-* O atributo `lang` dentro do elemento `<html>` é usado para definir o idioma principal do conteúdo da página, nesse caso "pt-BR" indica o Português Brasileiro. Isso é utilizado para acessibilidade, internacionalização e motores de busca.
-* O elemento `<meta charset="utf-8">` especifica o conjunto de caracteres utilizado para interpretar e exibir o conteúdo textual da página web.
-* O elemento `<meta name="viewport" content="width=device-width, initial-scale=1.0">` é usado para controlar como a página é exibida em dispositivos móveis, ajustando a largura e a escala inicial da viewport (a área visível da página em um navegador).
-* O elemento `<link>` é usado para vincular recursos externos, como folhas de estilo CSS, ao documento HTML. Quando você usa `<link rel="stylesheet" href="styles.css">`, está basicamente dizendo ao navegador para carregar o arquivo "styles.css" e aplicar suas regras de estilo ao documento HTML atual.
-* O atributo `class` dentro do elemento `<div class="nome_da_classe">` é usado para associar um ou mais nomes de classes a um elemento HTML. As classes são usadas principalmente para associar um elemento com regras de estilo em um arquivo de folha de estilo CSS externo ou interno, ou para selecionar e manipular elementos com JavaScript.
+* `lang="pt-BR"`: define o idioma principal do conteúdo como Português do Brasil, importante para acessibilidade, internacionalização e motores de busca.
+* `<meta charset="utf-8">`: especifica a codificação de caracteres utilizada na página.
+* `<meta name="viewport" ...>`: ajusta a exibição em dispositivos móveis, controlando largura e escala inicial.
+* `<link rel="stylesheet" href="styles.css">`: vincula a folha de estilo externa "styles.css" ao documento HTML. Quando você usa `<link rel="stylesheet" href="styles.css">`, está basicamente dizendo ao navegador para carregar o arquivo "styles.css" e aplicar suas regras de estilo ao documento HTML atual.
+* `class`: a inclusão de classe dentro do elemento `<div class="nome_da_classe">` é usado para associar um ou mais nomes de classes a um elemento HTML. As classes são usadas principalmente para associar um elemento com regras de estilo em um arquivo CSS externo ou interno, ou para selecionar e manipular elementos com JavaScript.
 
-Em seguida, crie um arquivo chamado `styles.css` dentro da pasta `code` e copie e cole nesse arquivo o código abaixo.
+**Criando o CSS**
+
+Agora, crie um arquivo chamado `styles.css` dentro da pasta `code` e insira o seguinte conteúdo:
 
 ```css
 .conteiner {
@@ -260,7 +313,7 @@ Em seguida, crie um arquivo chamado `styles.css` dentro da pasta `code` e copie 
 }
 ```
 
-A seguir temos algumas explicações sobre o código CSS:
+**Explicação sobre as alterações no CSS**
 
 * `.conteiner`: Este é um seletor CSS que aplica estilos a elementos que possuem a classe "conteiner" em seu HTML.
   * `text-align: center;`: Isso centraliza o texto dentro dos elementos com a classe "conteiner".
@@ -279,17 +332,19 @@ A seguir temos algumas explicações sobre o código CSS:
   * `background-color: darkgray;`: Define a cor de fundo das células como cinza escuro.
   * `cursor: pointer;`: Define o cursor do mouse como um ponteiro ao passar sobre as células, indicando que elas são interativas.
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
+**Visualização**
+
+Abra novamente o arquivo `index.html` no navegador. O resultado deverá se assemelhar à imagem abaixo:
 
 ![Imagem Jogo 02](./docs/img_jogo2.png)
 
-Repare que a página web está como uma aparência mais agradável, isso graças ao CSS incluído no arquivo HTML.
+Agora, a página apresenta um visual mais organizado e agradável, graças à aplicação do CSS.
 
 ### Melhorando a Visualização do Jogo - HTML + CSS
 
-Nessa etapa, iremos melhor um pouco mais a visualização da página web. Para isso, iremos atualizar o HTML e o CSS da página. No HTML iremos criar uma estrutura de cabeçalho e rodapé. No CSS iremos estilizar o `body`, `header`, `footer` e `button`.
+Nesta etapa, vamos aprimorar a aparência da página web. Para isso, atualizaremos tanto o HTML quanto o CSS. No HTML, será criada uma estrutura com cabeçalho (`<header>`) e rodapé (`<footer>`). No CSS, aplicaremos estilos ao `body`, `header`, `footer` e `button`.
 
-Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
+Atualize o conteúdo do arquivo `index.html` com o código abaixo:
 
 ```html
 <!DOCTYPE html>
@@ -326,19 +381,19 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
             </p>
             <footer>
                 <p><b>Desenvolvido por:</b> Turma GAC116</p>
-                <p><b>Copyright:</b> 2024</p>
+                <p><b>Copyright:</b> 2025</p>
             </footer>
         </div>
     </body>
 </html>
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código HTML:
+**Alterações no HTML**
 
-* A tag HTML `<header>` é usada para definir um cabeçalho de uma página do documento HTML. Esse cabeçalho geralmente contém informações introdutórias ou de navegação para o conteúdo principal da página. Dentro desse cabeçalho foram colocados o título e a logo da página web.
-* A tag HTML `<footer>` é usada para definir um rodapé de uma página do documento HTML. Dentro desse rodapé foram colocados dois parágrafos da página web.
+* `<header>`: define o cabeçalho da página. Esse cabeçalho geralmente contém informações introdutórias ou de navegação para o conteúdo principal da página. Dentro desse cabeçalho foram colocados o título e a logo da página web.
+* `<footer>`: define o rodapé da página. Dentro desse rodapé foram colocados dois parágrafos.
 
-Adicione ao final do arquivo `styles.css` o conteúdo CSS exibido abaixo:
+Agora, adicione ao final do arquivo `styles.css` o seguinte código:
 
 ```css
 ...
@@ -375,7 +430,7 @@ button:hover {
 }
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código CSS:
+**Alterações no CSS**
 
 * O seletor `body` é usado para aplicar estilos ao elemento `<body>` do documento HTML. O elemento `<body>` é o elemento principal que contém todo o conteúdo visível de uma página da web. Quando você aplica estilos usando o seletor `body`, esses estilos afetam todo o conteúdo da página, a menos que sejam anulados por estilos aplicados a elementos filhos de forma mais específica.
     * `font-family: Arial, sans-serif;`: Esta regra define a família de fontes para o texto dentro do elemento `<body>`. A primeira escolha de fonte é "Arial", uma fonte sans-serif comum, que será usada se estiver disponível no sistema do usuário. Se "Arial" não estiver disponível, o navegador procurará por uma fonte sans-serif genérica para usar, que é especificada como "sans-serif". Isso garante que o texto dentro do elemento `<body>` seja exibido com uma fonte legível, como Arial, ou, se Arial não estiver disponível, uma fonte sans-serif genérica.
@@ -396,17 +451,19 @@ A seguir temos algumas explicações sobre as atualizações do código CSS:
 * O seletor `button:hover` é usado para aplicar estilos aos elementos `<button>` quando o cursor do mouse está sobre eles (quando estão em estado de hover).
     * `background-color: #17D;`: Esta regra define a cor de fundo dos botões quando o cursor do mouse está sobre eles. A cor de fundo é definida como "#17D", que é uma cor azul mais escura em formato hexadecimal.
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
+Abra novamente o arquivo `index.html` no navegador. O resultado deverá se assemelhar à imagem abaixo:
 
 ![Imagem Jogo 03](./docs/img_jogo3.png)
 
-Repare que até esse passo, ao clicar no tabuleiro nenhuma jogada é efetuada. Iremos agora dar comportamentos a nossa página.
+Observe que, até este ponto, o tabuleiro ainda não possui interatividade, ou seja, clicar nas células não gera nenhuma jogada. Na próxima etapa, iremos adicionar comportamentos a nossa página com JavaScript.
 
-### Incorporando Interatividade com o Jogo - HTML + CSS + JS
+### Criando Interatividade no Jogo - HTML + CSS + JS
 
-Nessa etapa, iremos criar interatividade com o nosso jogo através da incorporação de códigos JavaScript. Para isso, iremos atualizar o HTML e o CSS da página, além de criar um código JavaScript. No HTML, iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS, iremos estilizar a célula um pouco mais. No JavaScript, iremos permitir fazer jogadas e permitir reiniciar o jogo.
+Nesta etapa, vamos tornar o nosso jogo interativo com o uso de JavaScript. Para isso, iremos atualizar o HTML e o CSS da página, além de criar um código JavaScript. No HTML, iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS, iremos estilizar a célula um pouco mais. No JavaScript, iremos permitir fazer jogadas e permitir reiniciar o jogo.
 
-Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
+**Atualizando o HTML**
+
+Substitua o conteúdo do arquivo `index.html` pelo seguinte código:
 
 ```html
 <!DOCTYPE html>
@@ -443,7 +500,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
             </p>
             <footer>
                 <p><b>Desenvolvido por:</b> Turma GAC116</p>
-                <p><b>Copyright:</b> 2024</p>
+                <p><b>Copyright:</b> 2025</p>
             </footer>
         </div>
         <script src="script.js"></script>
@@ -451,13 +508,15 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 </html>
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código HTML:
+**Explicação sobre as alterações no HTML**
 
 * O elemento `<div>` da classe "celula" agora ouve um evento de click `onclick="fazerMovimento(x)`. Ao receber um click do mouse (botão esquerdo) o método do JavaScript chamado `fazerMovimento` é chamado com o valor `x` passado como parâmetro.
-* O elemento `<button>`  agora ouve um evento de click `onclick="reiniciarJogo()`. Ao receber um click do mouse (botão esquerdo) o método do JavaScript chamado `reiniciarJogo` é chamado sem nenhum parâmetro.
+* O elemento `<button>` agora ouve um evento de click `onclick="reiniciarJogo()`. Ao receber um click do mouse (botão esquerdo) o método do JavaScript chamado `reiniciarJogo` é chamado sem nenhum parâmetro.
 * O elemento `<script>`, no final do arquivo, carrega um arquivo JavaScript chamado `script.js`.
 
-Atualize o código do arquivo `styles.css` dentro da página `code` para que a `celula` tenha mais alguns atributos. Assim esse código da célula deve se parecer com o código abaixo:
+**Atualizando o CSS**
+
+Modifique o seletor `.celula` em `styles.css` para incluir novos estilos:
 
 ```css
 ...
@@ -477,16 +536,17 @@ Atualize o código do arquivo `styles.css` dentro da página `code` para que a `
 ...
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código CSS:
+**Explicação sobre as alterações no CSS**
 
-* `.celula`: Este é um seletor CSS que aplica estilos a elementos que possuem a classe "celula" em seu HTML.
-    * `display: flex;`: Esta regra define o modelo de layout flexível para os elementos com a classe "celula", permitindo um controle mais preciso sobre o posicionamento dos elementos internos.
-    * `justify-content: center;` Esta regra centraliza os itens dentro dos elementos da classe "celula" horizontalmente.
-    * `align-items: center;`: Esta regra centraliza os itens dentro dos elementos da classe "celula" verticalmente.
-    * `font-size: 90px;`: Esta regra define o tamanho da fonte dos elementos com a classe "celula" como 90 pixels.
-    * `font-weight: bold;`: Esta regra define o estilo da fonte como negrito para os elementos com a classe "celula".
+* `display: flex;`: Esta regra define o modelo de layout flexível para os elementos com a classe "celula", permitindo um controle mais preciso sobre o posicionamento dos elementos internos.
+* `justify-content: center;` Esta regra centraliza os itens dentro dos elementos da classe "celula" horizontalmente.
+* `align-items: center;`: Esta regra centraliza os itens dentro dos elementos da classe "celula" verticalmente.
+* `font-size: 90px;`: Esta regra define o tamanho da fonte dos elementos com a classe "celula" como 90 pixels.
+* `font-weight: bold;`: Esta regra define o estilo da fonte como negrito para os elementos com a classe "celula".
 
-Crie um arquivo chamado `script.js` dentro da pasta `code` e copie e cole nesse arquivo o código abaixo.
+**Criando o JavaScript**
+
+Crie um arquivo chamado `script.js` na pasta `code` e adicione o seguinte código:
 
 ```javascript
 let jogadorAtual = 'X';
@@ -510,12 +570,14 @@ function reiniciarJogo() {
 }
 ```
 
-A seguir temos algumas explicações sobre o código JavaScript:
+**Explicações do código JavaScript**
 
 * `let jogadorAtual = 'X';`: Cria uma variável chamada jogadorAtual e a incializa com o valor 'X'.
 * `let tabuleiro = ['', '', '',  '', '', '',  '', '', ''];`: Cria uma variável chamada tabuleiro e a incializa como um vetor de valores vazio `''`.
 * `fazerMovimento(index)`: Esta função é chamada quando um jogador faz um movimento clicando em uma célula do tabuleiro. Ela recebe um índice como argumento, que representa a posição da célula no tabuleiro. Se a célula estiver vazia (representada por `''` no array tabuleiro), o jogador atual pode fazer o movimento. A função atualiza o estado do tabuleiro, definindo o valor da célula correspondente como o símbolo do jogador atual ('X' ou 'O'). Em seguida, atualiza o texto da célula no HTML para mostrar o símbolo do jogador atual. Por fim, alterna o jogador atual entre 'X' e 'O', para que o próximo jogador possa fazer o movimento.
 * `reiniciarJogo()`: Esta função é chamada quando o jogo precisa ser reiniciado. Ela redefine o jogador atual como 'X' e limpa o tabuleiro, preenchendo-o com valores vazios ''. Em seguida, percorre todas as células do tabuleiro no HTML e remove o texto delas, deixando as células vazias novamente.
+
+**O que é DOM?**
 
 Como o JavaScript interage com sua página web? O JavaScript faz essa interação através do DOM (*Document Object Model* ou Modelo de Documento do Objeto). Com o JavaScript você pode acessar e alterar elementos, além de poder adicionar novos elementos ao DOM.
 
@@ -525,44 +587,49 @@ O que é o DOM? O DOM trata da modelagem de todo o HTML. O DOM é como uma árvo
 
 Fonte: [https://en.wikipedia.org/wiki/Document_Object_Model](https://en.wikipedia.org/wiki/Document_Object_Model)
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
+A seguir estão listados alguns dos métodos no JavaScript para acesso ao DOM:
+
+* `document.getElementById(ID);`
+* `document.getElementsByClassName(CLASS_NAME);`
+* `document.getElementsByTagName(TAG_NAME);`
+
+**Visualização**
+
+Abra o arquivo `index.html` no navegador. O resultado deverá se assemelhar à imagem abaixo:
 
 ![Imagem Jogo 04](./docs/img_jogo4.png)
 
-A seguir estão listados alguns dos métodos no JavaScript para acesso ao DOM:
+Agora o jogo já permite realizar jogadas e reiniciar a partida.
 
-* document.getElementById(ID);
-* document.getElementsByClassName(CLASS_NAME);
-* document.getElementsByTagName(TAG_NAME);
+### Melhorando a Interatividade no Jogo - HTML + CSS + JS
 
-### Melhorando a Interatividade com o Jogo - HTML + CSS + JS
+Nesta etapa, vamos aumentar a interatividade do jogo por meio de um campo de status que exibirá informações na tela. Esse campo mostrará de quem é a vez de jogar e, quando houver um vencedor ou empate, apresentará a mensagem correspondente. Além disso, o JavaScript será usado para aplicar uma estilização diferenciada aos símbolos no tabuleiro.
 
-Agora, iremos melhor a interatividade com o jogo através de um campo de status da partida que será exibido na tela. Quando um dos jogadores ganhar uma mensagem será exibida. Além disso, uma estilização da página será feita através do JavaScript.
+**Atualizando o HTML**
 
-Atualize o conteúdo do arquivo `index.html` para o conteúdo destacado abaixo.
+No arquivo `index.html`, adicione a seguinte linha antes do botão:
 
 ```html
-<!DOCTYPE html>
-<html lang="pt-BR">
-    ...
-    <body>
-        <div class="conteiner">
-            ...
-            <p id="status"></p> <!--Acrescentar apenas essa linha antes do botão-->
-            <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
-            ...
-        </div>
-    </body>
-</html>
+...
+<body>
+    <div class="conteiner">
+        ...
+        <p id="status"></p> <!--Acrescentar apenas essa linha antes do botão-->
+        <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+        ...
+    </div>
+</body>
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código HTML:
+**Alteração no HTML**
 
-* Um elemento `<p>` com o atributo id igual a "status" foi criado. Nesse elemento, iremos escrever algumas informações do status atual do jogo. Repare que esse parágrafo inicialmente está vazio. O JavaScript é quem irá alimentar o conteúdo a ser exibido.
+* Criamos um elemento `<p>` com o atributo `id="status"`. Esse parágrafo começa vazio e será preenchido dinamicamente pelo JavaScript com mensagens sobre o andamento da partida.
 
-**OBS**: O arquivo CSS não precisa ser alterado nessa etapa.
+**Observação**: o arquivo CSS não precisa ser alterado nesta etapa.
 
-Altere o conteúdo do arquivo `script.js` dentro da pasta `code` para o seguinte código.
+**Atualizando o JavaScript**
+
+Substitua o conteúdo do arquivo `script.js` pelo seguinte:
 
 ```javascript
 let jogoAtivo = true;
@@ -637,7 +704,7 @@ function reiniciarJogo() {
 mostrarStatus();
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código JavaScript:
+**Explicações do Código JavaScript**
 
 * `jogoAtivo`: Uma variável booleana que indica se o jogo está ativo ou não.
 * `padroesVitoria`: Uma matriz que define os padrões de vitória no jogo da velha. Cada subarray representa uma linha, coluna ou diagonal no tabuleiro onde um jogador pode ganhar.
@@ -646,16 +713,24 @@ A seguir temos algumas explicações sobre as atualizações do código JavaScri
 * `fazerMovimento(index)`: Uma função chamada quando um jogador faz um movimento clicando em uma célula do tabuleiro. Esta função verifica se o movimento é válido, atualiza o estado do tabuleiro, muda o jogador atual e atualiza o status do jogo.
 * `reiniciarJogo()`: Uma função chamada para reiniciar o jogo, redefinindo todas as variáveis para seus valores iniciais e limpando o tabuleiro.
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
+**Visualização**
+
+Abra o arquivo `index.html` no navegador. O resultado deverá se parecer com a imagem abaixo:
 
 ![Imagem Jogo 05](./docs/img_jogo5.png)
+
+Agora o jogo exibe dinamicamente o status da partida e destaca visualmente com cores os símbolos dos jogadores, tornando a experiência mais clara e interativa.
 
 ### Tornando o Jogo Temático e Dinâmico - HTML + CSS + JS
 
 Nessa etapa, iremos tornar o nosso jogo temático e dinâmico. Por temático quermos dizer que iremos colocar dois jogadores no jogo da Velha e os mesmos são do conhecido jogo "Mario Bros" (Mario e Luigi). Para isso, iremos atualizar o HTML, o CSS e JavaScript da página web.
 No HTML, iremos colocar duas imagens `gif` dos personagens citados, além de adicionar o histórico de vitórias. No CSS, iremos colocar mais alguns elementos para estilização dos dois personagens. No JavaScript, iremos colocar animações estilizadas quando um dos jogadores ganhar, além de animações sinalizando a vez de cada jogador.
 
-Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
+**Atualizando o HTML**
+
+Antes de começar, copie os arquivos `img_mario.gif` e `img_luigi.gif` da pasta `page` para a pasta `code`.
+
+Substitua o conteúdo do arquivo `index.html` pelo código abaixo:
 
 ```html
 <!DOCTYPE html>
@@ -709,7 +784,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
             </p>
             <footer>
                 <p><b>Desenvolvido por:</b> Turma GAC116</p>
-                <p><b>Copyright:</b> 2024</p>
+                <p><b>Copyright:</b> 2025</p>
             </footer>
         </div>
         <script src="script.js"></script>
@@ -717,7 +792,7 @@ Atualize o conteúdo do arquivo `index.html` para o conteúdo exibido abaixo.
 </html>
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código HTML:
+**Explicação sobre as alterações no HTML**
 
 * `<div>`: Este é um elemento de bloco genérico usado para agrupar outros elementos. Neste caso, três divs estão sendo usadas para dividir a área do jogo em três colunas.
 * `<div class="conteiner_jogo">`: Estes são contêineres de jogo que contêm elementos relacionados a cada jogador e ao status do jogo. Eles têm uma largura de 33% do contêiner pai, permitindo que ocupem uma terça parte da largura disponível.
@@ -725,9 +800,9 @@ A seguir temos algumas explicações sobre as atualizações do código HTML:
 * `<img id="imgX" class="img_personagem" src="img_mario.gif" alt="Mario" width="150" height="200">` e `<img id="imgO" class="img_personagem" src="img_luigi.gif" alt="Mario" width="150" height="200">`: Estas são imagens dos personagens do jogo (Mario e Luigi). Cada imagem tem um ID específico (imgX e imgO) e uma classe (img_personagem) para estilização CSS específica.
 * `<p id="qtdVitoriaX">Quantidade de Vitória X: 0</p>`, `<p id="qtdVitoriaO">Quantidade de Vitória O: 0</p>` e `<p id="qtdEmpate">Quantidade de Empate: 0</p>`: Estes são parágrafos com IDs específicos (qtdVitoriaX, qtdVitoriaO e qtdEmpate) que serão usados para exibir estatísticas do jogo, como a quantidade de vitórias para cada jogador e a quantidade de empates através da manipulação via JavaScript.
 
-Copie os arquivos `img_mario.gif` e `img_luigi.gif` da pasta `page` para a pasta `code`.
+**Atualizando o CSS**
 
-Adicione ao final do arquivo `styles.css` o conteúdo CSS exibido abaixo:
+Adicione ao final do arquivo `styles.css`:
 
 ```css
 ...
@@ -756,7 +831,7 @@ Adicione ao final do arquivo `styles.css` o conteúdo CSS exibido abaixo:
 }
 ```
 
-A seguir temos algumas explicações sobre as atualizações do código CSS:
+**Explicação sobre as alterações no CSS**
 
 * `.conteiner_jogo`: É um seletor de classe CSS.
     * `width: 33%;`: define a largura dos elementos da classe "conteiner_jogo" como 33% da largura do contêiner pai.
@@ -777,7 +852,9 @@ A seguir temos algumas explicações sobre as atualizações do código CSS:
     * `color: #F44;`: define a cor do texto como vermelho (#F44) para o elemento com o ID marcadorO.
     * `margin: 20px;`: define uma margem de 20 pixels ao redor do elemento com o ID marcadorO.
 
-Altere o conteúdo do arquivo `script.js` dentro da pasta `code` para o seguinte código.
+**Atualizando o JavaScript**
+
+Substitua o conteúdo de `script.js` pelo código abaixo:
 
 ```javascript
 let jogoAtivo = true;
@@ -892,7 +969,7 @@ function reiniciarJogo() {
 mostrarStatus();
 ```
 
-A seguir temos algumas explicações de algumas linhas isoladas do código JavaScript:
+**Explicação sobre as alterações do JavaScript**
 
 * `document.getElementById('imgX').style.opacity = 1.0;`: Esta linha define a opacidade da imagem com o ID imgX para 1.0, ou seja, totalmente opaca. Isso torna a imagem completamente visível.
 * `document.getElementById('imgO').style.opacity = 0.2;`: Esta linha define a opacidade da imagem com o ID imgO para 0.2, o que a torna parcialmente opaca. Isso torna a imagem mais transparente.
@@ -901,29 +978,36 @@ A seguir temos algumas explicações de algumas linhas isoladas do código JavaS
 * `document.getElementById('imgX').style.transition = "width 1s ease";`: Esta linha adiciona uma transição de animação à mudança de largura da imagem com o ID imgX. A largura mudará durante um período de 1 segundo, usando uma função de transição "ease" (suavização).
 * `document.getElementsByClassName('celula')[index].style.color = "#FD0";`: Aqui, o texto da célula correspondente ao índice especificado é definido como amarelo (#FD0).
 
-Abra o arquivo `index.html` no navegador e veja o conteúdo da página. A página exibida deverá si parecer com a imagem abaixo.
+**Visualização**
+
+Abra o arquivo `index.html` no navegador. A página deverá se parecer com a imagem abaixo:
 
 ![Imagem Jogo 06](./docs/img_jogo6.png)
 
+Agora, além da jogabilidade, o jogo exibe personagens temáticos, animações de destaque e um histórico de resultados, deixando a experiência mais divertida e imersiva.
+
 ### Incorporando jQuery no Jogo
 
-Para realizar a incorporação de jQuery no nosso código do jogo é necessário alterar o código do HTML. Faça a seguinte alteração para incorporação do código javascript da biblioteca jQuery na nossa página.
+Nesta etapa iremos simplificar o código JavaScript através da utilização da biblioteca jQuery. O jQuery possui como objetivo simplificar a manipulação de elementos em páginas web. Ele fornece uma forma mais curta, intuitiva e compatível entre navegadores de escrever código JavaScript.
+
+**Atualizando o HTML**
+
+Para utilizar o jQuery em nosso projeto, é necessário incluir a biblioteca no código HTML. Para isso, adicione a seguinte linha antes do arquivo `script.js`:
 
 ```html
-<!DOCTYPE html>
-<html lang="pt-BR">
+...
+<body>
     ...
-    <body>
-        ...
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> <!-- linha incluída -->
-        <script src="script.js"></script>
-    </body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> <!-- linha incluída -->
+    <script src="script.js"></script>
+</body>
 ```
 
-Para realizar a incorporação de jQuery no nosso código do jogo não é necessário alterar o código do CSS.
+**Observação:** não é necessário alterar o código CSS para incorporar o jQuery.
 
-Para atualizar o código do JavaScript para suportar jQuery faça as seguintes alterações no código `scripts.js`:
+**Atualizando o código JavaScript**
+
+Agora, vamos adaptar o código `script.js` para utilizar jQuery. O código atualizado ficará da seguinte forma:
 
 ```javascript
 let jogoAtivo = true;
@@ -1024,7 +1108,7 @@ function reiniciarJogo() {
 mostrarStatus();
 ```
 
-Explicando o código jQuery:
+**Explicação sobre o código do jQuery**
 
 * `$('#imgX').css({opacity: 1.0, width: "150px"});`: Isso seleciona o elemento com o ID imgX e define suas propriedades CSS. Nesse caso, define a opacidade como 1.0 (totalmente visível) e a largura como 150 pixels.
     * Subistituí as linhas javascript:
@@ -1048,39 +1132,51 @@ Explicando o código jQuery:
         * `    celulas[i].textContent = '';`
         * `}`
 
-Para mais informações, consulte [https://jquery.com/](https://jquery.com/).
+**Visualização**
 
-Para mais informações, faça o curso [jQuery da w3schools](https://www.w3schools.com/jquery/default.asp).
+Abra o arquivo `index.html` no navegador. Repare que o jogo continua o mesmo, mas o código ficou mais simples.
 
 ### Publicando o Jogo no Github
 
-Para publicar/postar o jogo desenvolvido no Github Pages, faça o seguinte.
+Para disponibilizar o jogo desenvolvido no GitHub Pages, siga os passos abaixo:
 
-Primeiramente, coloque o seu jogo no github. Depois, vá em `Settings` (no Github). Clique em `Pages`. Na parte de `Build and deployment` e em `Branch`, selecione o branch `main` e clique em `Save`.
+1. Faça o upload do seu projeto para um repositório no GitHub.
+
+2. Acesse a aba **Settings** do repositório.
+
+3. Clique em **Pages** no menu lateral.
+
+4. Em **Build and deployment**, vá até a opção **Branch**, selecione o branch `main` e clique em **Save**.
 
 ![Publicando o Jogo no Github](./docs/postando-jogo-github.png)
 
+Após a configuração, o GitHub Pages gerará um link onde o jogo poderá ser acessado online.
+
 ### Melhorias no Projeto do Jogo
 
-A seguir tem-se algumas sugestões de melhoria nesse projeto de jogo.
+A seguir, são apresentadas algumas sugestões de aprimoramento para o projeto do jogo:
 
-* **Modos de Jogo Alternativos:** Além do modo tradicional de 3x3, adicione outros modos de jogo alternativos, como tabuleiros maiores (4x4 ou 5x5). Isso pode adicionar variedade e desafio ao jogo.
-* **Temas Visuais:** Implemente diferentes temas visuais para o tabuleiro do jogo da velha. Por exemplo, você pode ter temas como "Espaço", "Fantasia", "Subaquático", "Histórico", entre outros. Cada tema pode ter um conjunto de imagens de fundo e ícones de jogador correspondentes.
-* **Modo Torneio:** Implemente uma animação final para o jogador que vencer um total de 10 partidas. Essa animação deve conter algum pódio e um botão de reiniciar o torneio.
+* **Modos de Jogo Alternativos:** além do tabuleiro tradicional 3x3, implemente opções de tabuleiros maiores, como 4x4 ou 5x5, adicionando variedade e maior nível de desafio.
+* **Temas Visuais:** crie diferentes temas gráficos para o tabuleiro, como *Espaço*, *Fantasia*, *Subaquático* ou *Histórico*. Cada tema pode incluir planos de fundo exclusivos e ícones personalizados para os jogadores.
+* **Modo Torneio:** adicione uma funcionalidade em que o jogador que vencer 10 partidas consecutivas desbloqueie uma animação especial, com pódio e a opção de reiniciar o torneio.
 
 ## Desenvolva Novos Projetos
 
-Com o conhecimento obtido até aqui de HTML, CSS e JavaScript implemente os seguintes projetos de forma a treinar o conhecimento:
-			
-* Desenvolva uma página pessoal.
-* Desenvolva uma calculadora.
-* Desenvolva um jogo da memória.
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+
+Com os conhecimentos adquiridos em HTML, CSS e JavaScript, desenvolva novos projetos para praticar e consolidar o aprendizado:
+
+* Crie uma **página pessoal**.
+* Desenvolva uma **calculadora**.
+* Construa um **jogo da memória**.
 
 ## Créditos e Referências
 
-Para mais informações sobre comandos específicos de HTML, CSS, JavaScript e jQuery, faça os seguintes cursos:
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-* [Curso de HTML da w3schools](https://www.w3schools.com/html/default.asp)
-* [Curso de CSS da w3schools](https://www.w3schools.com/css/default.asp)
-* [Curso de JavaScript da w3schools](https://www.w3schools.com/js/default.asp)
-* [Curso de jQuery da w3schools](https://www.w3schools.com/jquery/default.asp)
+Para aprofundar os estudos sobre HTML, CSS, JavaScript e jQuery, recomenda-se a consulta aos seguintes cursos:
+
+* [Curso de HTML - W3Schools](https://www.w3schools.com/html/default.asp)
+* [Curso de CSS - W3Schools](https://www.w3schools.com/css/default.asp)
+* [Curso de JavaScript - W3Schools](https://www.w3schools.com/js/default.asp)
+* [Curso de jQuery - W3Schools](https://www.w3schools.com/jquery/default.asp)
