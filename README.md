@@ -40,25 +40,32 @@ A seguir estão listados os principais recursos empregados no desenvolvimento de
 
 ### Linguagens
 
-* HTML - Responsável pela estrutura do conteúdo - [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
-* CSS - Responsável pela apresentação visual - [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
-* JavaScript - Responsável pelo comportamento e interatividade - [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
+* HTML - Responsável pela estrutura do conteúdo
+    * [Link do curso da W3Schools](https://www.w3schools.com/html/default.asp)
+* CSS - Responsável pela apresentação visual
+    * [Link do curso da W3Schools](https://www.w3schools.com/css/default.asp)
+* JavaScript - Responsável pelo comportamento e interatividade
+    * [Link do curso da W3Schools](https://www.w3schools.com/js/default.asp)
 
 ### Bibliotecas
 
-* jQuery - Biblioteca que simplifica a manipulação do JavaScript - [link site oficial](https://jquery.com/) - [link do curso da w3schools](https://www.w3schools.com/jquery/default.asp)
+* jQuery - Biblioteca que simplifica a manipulação do JavaScript
+    * [Link site oficial jQuery](https://jquery.com/)
+    * [Link do curso da W3Schools](https://www.w3schools.com/jquery/default.asp)
 
 ### Ferramentas
 
-* Visual Studio Code - Ambiente de Desenvolvimento Integrado - [link](https://code.visualstudio.com/)
-* Git - Sistema de controle de versão - [link](https://git-scm.com/)
-* Github - Plataforma de hospedagem e colaboração em projetos de software - [link](https://github.com/)
-* Live Server (Extensão VS Code) - Servidor web para desenvolvimento local - [link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-* http.server - Servidor web simples incluso na biblioteca padrão do Python - [link](https://docs.python.org/3/library/http.server.html)
+* Visual Studio Code - Ambiente de Desenvolvimento Integrado - [Link](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão - [Link](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software - [Link](https://github.com/)
+* Live Server (Extensão VS Code) - Servidor web para desenvolvimento local - [Link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+* http.server - Servidor web simples incluso na biblioteca padrão do Python - [Link](https://docs.python.org/3/library/http.server.html)
 
 ## Fundamentos Teóricos
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+
+A seguir estão destacados alguns dos principais fundamentos teóricos para entendimento deste tutorial.
 
 ### Arquitetura Web de Três Camadas
 
@@ -120,7 +127,7 @@ A animação apresentada a seguir ilustra, de maneira visual, o resultado espera
 
 Siga os passos abaixo para alcançar o objetivo proposto: desenvolver o **Jogo da Velha Temático**.
 
-### Clonando o Repositório
+### Clonar o Repositório
 
 Para iniciar, faça o clone do repositório com o seguinte comando:
 
@@ -128,17 +135,17 @@ Para iniciar, faça o clone do repositório com o seguinte comando:
 git clone https://github.com/ufla-prog-web/aula-html-css-js.git
 ```
 
-### Baixando o Repositório
+### Baixar o Repositório
 
 Como alternativa ao clone, você pode baixar diretamente o repositório acessando este [link](https://github.com/ufla-prog-web/aula-html-css-js). Clique em `Code` e, em seguida, em `Download ZIP`.
 
-### Abrindo o Visual Studio Code
+### Abrir o Visual Studio Code
 
 Abra o Visual Studio Code (VS Code) na pasta `aula-html-css-js`.
 
 **Dica:** abra o arquivo `README.md` e selecione a opção `Open Preview to the Side` para visualizar o tutorial lado a lado enquanto desenvolve a aplicação.
 
-### Criando a Estrutura do Jogo - HTML
+### Criar a Estrutura do Jogo - HTML
 
 O desenvolvimento de qualquer página web inicia-se pela definição de sua estrutura em HTML. Nesta etapa, o foco está na organização do conteúdo da página, e não em sua aparência visual.
 
@@ -185,26 +192,26 @@ Crie uma pasta chamada `code` na raiz do projeto `aula-html-css-js`. Em seguida,
 
 **Explicação sobre o código HTML**
 
-* `<!DOCTYPE html>` → define que o documento segue o padrão HTML5.
-* `<html>` → elemento raiz de toda página HTML.
-* `<head>` → contém informações sobre a página, como metadados e título.
-* `<meta>` → define a codificação de caracteres utilizada.
-* `<title>` → define o título exibido na aba do navegador.
-* `<body>` → representa o corpo do documento.
-* `<div>` → cria uma divisão lógica no layout da página.
-* `<h1>` → define um título grande.
-* `<img>` → insere uma imagem.
-* `<p>` → representa um parágrafo de texto.
-* `<b>` → exibe o texto em negrito.
-* `<hr>` → insere uma barra horizontal.
-* `<button>` → cria um botão interativo.
-* `<a>` → define um hiperlink para outra página ou recurso.
+* `<!DOCTYPE html>`: define que o documento segue o padrão HTML5.
+* `<html>`: elemento raiz de toda página HTML.
+* `<head>`: contém informações sobre a página, como metadados e título.
+* `<meta>`: define a codificação de caracteres utilizada.
+* `<title>`: define o título exibido na aba do navegador.
+* `<body>`: representa o corpo do documento.
+* `<div>`: cria uma divisão lógica no layout da página.
+* `<h1>`: define um título grande.
+* `<img>`: insere uma imagem.
+* `<p>`: representa um parágrafo de texto.
+* `<b>`: exibe o texto em negrito.
+* `<hr>`: insere uma barra horizontal.
+* `<button>`: cria um botão interativo.
+* `<a>`: define um hiperlink para outra página ou recurso.
 
 Observe que a maioria dos elementos HTML possui uma tag de abertura e uma tag de fechamento, como `<title>` e `</title>`. Entretanto, existem algumas exceções, como `<hr>`, que não possuem fechamento. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
 
 Por fim, copie o arquivo `img_logo.png` da pasta `page` para a pasta `code`.
 
-### Executando a Aplicação Web
+### Executar a Aplicação Web
 
 Abra o arquivo `index.html` em um navegador para visualizar o conteúdo da página. Isso pode ser feito de duas maneiras:
 
@@ -233,7 +240,7 @@ Após iniciar o servidor, abra o navegador e acesse a página. O resultado dever
 
 Note que, neste momento, a página ainda está simples e com aparência pouco atrativa. Nas próximas etapas, trabalharemos o estilo para deixá-la mais organizada e visualmente agradável.
 
-### Criando Estilos da Apresentação no Jogo - HTML + CSS
+### Criar Estilos da Apresentação no Jogo - HTML + CSS
 
 Nessa etapa, iremos melhorar o aspecto visual da nossa página web através da incorporação de estilos em CSS (*Cascading Style Sheets* ou Folhas de Estilo em Cascata).
 
@@ -340,7 +347,7 @@ Abra novamente o arquivo `index.html` no navegador. O resultado deverá se assem
 
 Agora, a página apresenta um visual mais organizado e agradável, graças à aplicação do CSS.
 
-### Melhorando a Visualização do Jogo - HTML + CSS
+### Melhorar a Visualização do Jogo - HTML + CSS
 
 Nesta etapa, vamos aprimorar a aparência da página web. Para isso, atualizaremos tanto o HTML quanto o CSS. No HTML, será criada uma estrutura com cabeçalho (`<header>`) e rodapé (`<footer>`). No CSS, aplicaremos estilos ao `body`, `header`, `footer` e `button`.
 
@@ -457,7 +464,7 @@ Abra novamente o arquivo `index.html` no navegador. O resultado deverá se assem
 
 Observe que, até este ponto, o tabuleiro ainda não possui interatividade, ou seja, clicar nas células não gera nenhuma jogada. Na próxima etapa, iremos adicionar comportamentos a nossa página com JavaScript.
 
-### Criando Interatividade no Jogo - HTML + CSS + JS
+### Criar Interatividade no Jogo - HTML + CSS + JS
 
 Nesta etapa, vamos tornar o nosso jogo interativo com o uso de JavaScript. Para isso, iremos atualizar o HTML e o CSS da página, além de criar um código JavaScript. No HTML, iremos chamar o código do JavaScript e colocar os eventos para ouvir os cliques do botão do mouse. No CSS, iremos estilizar a célula um pouco mais. No JavaScript, iremos permitir fazer jogadas e permitir reiniciar o jogo.
 
@@ -601,7 +608,7 @@ Abra o arquivo `index.html` no navegador. O resultado deverá se assemelhar à i
 
 Agora o jogo já permite realizar jogadas e reiniciar a partida.
 
-### Melhorando a Interatividade no Jogo - HTML + CSS + JS
+### Melhorar a Interatividade no Jogo - HTML + CSS + JS
 
 Nesta etapa, vamos aumentar a interatividade do jogo por meio de um campo de status que exibirá informações na tela. Esse campo mostrará de quem é a vez de jogar e, quando houver um vencedor ou empate, apresentará a mensagem correspondente. Além disso, o JavaScript será usado para aplicar uma estilização diferenciada aos símbolos no tabuleiro.
 
@@ -721,7 +728,7 @@ Abra o arquivo `index.html` no navegador. O resultado deverá se parecer com a i
 
 Agora o jogo exibe dinamicamente o status da partida e destaca visualmente com cores os símbolos dos jogadores, tornando a experiência mais clara e interativa.
 
-### Tornando o Jogo Temático e Dinâmico - HTML + CSS + JS
+### Tornar o Jogo Temático e Dinâmico - HTML + CSS + JS
 
 Nessa etapa, iremos tornar o nosso jogo temático e dinâmico. Por temático quermos dizer que iremos colocar dois jogadores no jogo da Velha e os mesmos são do conhecido jogo "Mario Bros" (Mario e Luigi). Para isso, iremos atualizar o HTML, o CSS e JavaScript da página web.
 No HTML, iremos colocar duas imagens `gif` dos personagens citados, além de adicionar o histórico de vitórias. No CSS, iremos colocar mais alguns elementos para estilização dos dois personagens. No JavaScript, iremos colocar animações estilizadas quando um dos jogadores ganhar, além de animações sinalizando a vez de cada jogador.
@@ -905,7 +912,7 @@ function mostrarStatus() {
             document.getElementById('imgX').style.opacity = 1.0;
             document.getElementById('imgO').style.opacity = 1.0;
             qtdEmpate += 1;
-            document.getElementById('qtdEmpate').textContent = "Quantidade de Empate:     " + qtdEmpate;
+            document.getElementById('qtdEmpate').textContent = "Quantidade de Empate: " + qtdEmpate;
         } else {
             elementoStatus.textContent = `O Jogador ${vencedor} ganhou!`;
             if (vencedor == 'X'){
@@ -937,7 +944,6 @@ function fazerMovimento(index) {
             document.getElementsByClassName('celula')[index].style.color = "#FD0";
             document.getElementById('imgO').style.opacity = 1.0;
             document.getElementById('imgX').style.opacity = 0.2;
-            
         } else {
             document.getElementsByClassName('celula')[index].style.color = "#F44";
             document.getElementById('imgX').style.opacity = 1.0;
@@ -951,9 +957,7 @@ function fazerMovimento(index) {
 function reiniciarJogo() {
     jogoAtivo = true;
     jogadorAtual = 'X';
-    tabuleiro = ['', '', '', 
-                '', '', '', 
-                '', '', ''];
+    tabuleiro = ['', '', '', '', '', '', '', '', ''];
     document.getElementById('imgX').style.opacity = 1.0;
     document.getElementById('imgO').style.opacity = 0.2;
     document.getElementById('imgX').style.width = "150px";
@@ -986,7 +990,7 @@ Abra o arquivo `index.html` no navegador. A página deverá se parecer com a ima
 
 Agora, além da jogabilidade, o jogo exibe personagens temáticos, animações de destaque e um histórico de resultados, deixando a experiência mais divertida e imersiva.
 
-### Incorporando jQuery no Jogo
+### Incorpor jQuery no Jogo
 
 Nesta etapa iremos simplificar o código JavaScript através da utilização da biblioteca jQuery. O jQuery possui como objetivo simplificar a manipulação de elementos em páginas web. Ele fornece uma forma mais curta, intuitiva e compatível entre navegadores de escrever código JavaScript.
 
@@ -1119,12 +1123,11 @@ mostrarStatus();
         * `document.getElementById('status').textContent = "Empate!";`
 * `$('#qtdEmpate').text("Quantidade de Empate: " + qtdEmpate);`: Seleciona o elemento com o ID qtdEmpate e define seu texto como "Quantidade de Empate: " concatenado com o valor da variável qtdEmpate. Isso é usado para atualizar o contador de empates no elemento correspondente.
     * Subistituí a linha javascript:
-        * `document.getElementById('qtdEmpate').textContent = "Quantidade de Empate:     " + qtdEmpate;`
+        * `document.getElementById('qtdEmpate').textContent = "Quantidade de Empate: " + qtdEmpate;`
 * `$('.celula').eq(index).text(jogadorAtual);`: Seleciona todos os elementos com a classe celula, e então escolhe o elemento na posição index (baseado no índice) dentro desse conjunto de elementos. Depois, define o texto desse elemento como o valor da variável jogadorAtual. Isso é usado para preencher a célula do tabuleiro com o símbolo do jogador atual.
     * Subistituí a linha javascript:
         * `document.getElementsByClassName('celula')[index].textContent = jogadorAtual;`
 * `$('.celula').eq(index).css('color', '#FD0');`: Similar à linha anterior, isso seleciona a célula específica com base no índice index e define sua cor de texto como amarelo (#FD0).
-    * Subistituí as linhas javascript:
 * `$('.celula').text('');`: Essa linha de código é usada para limpar o conteúdo de todos os elementos que possuem a classe CSS "celula", utilizada quando se deseja reiniciar o jogo.
     * Subistituí as linhas javascript:
         * `const celulas = document.getElementsByClassName('celula');`
@@ -1136,7 +1139,7 @@ mostrarStatus();
 
 Abra o arquivo `index.html` no navegador. Repare que o jogo continua o mesmo, mas o código ficou mais simples.
 
-### Publicando o Jogo no Github
+### Publicar o Jogo no Github
 
 Para disponibilizar o jogo desenvolvido no GitHub Pages, siga os passos abaixo:
 
@@ -1159,6 +1162,7 @@ A seguir, são apresentadas algumas sugestões de aprimoramento para o projeto d
 * **Modos de Jogo Alternativos:** além do tabuleiro tradicional 3x3, implemente opções de tabuleiros maiores, como 4x4 ou 5x5, adicionando variedade e maior nível de desafio.
 * **Temas Visuais:** crie diferentes temas gráficos para o tabuleiro, como *Espaço*, *Fantasia*, *Subaquático* ou *Histórico*. Cada tema pode incluir planos de fundo exclusivos e ícones personalizados para os jogadores.
 * **Modo Torneio:** adicione uma funcionalidade em que o jogador que vencer 10 partidas consecutivas desbloqueie uma animação especial, com pódio e a opção de reiniciar o torneio.
+* **Destacar a Linha Vencedora:** adicione um destaque com cores a linha vencedora do jogo.
 
 ## Desenvolva Novos Projetos
 
@@ -1169,6 +1173,8 @@ Com os conhecimentos adquiridos em HTML, CSS e JavaScript, desenvolva novos proj
 * Crie uma **página pessoal**.
 * Desenvolva uma **calculadora**.
 * Construa um **jogo da memória**.
+* Construa um **jogo de campo minado**.
+* Construa um **jogo pedra, papel e tesoura**.
 
 ## Créditos e Referências
 
