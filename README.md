@@ -1155,6 +1155,14 @@ Para disponibilizar o jogo desenvolvido no GitHub Pages, siga os passos abaixo:
 
 Após a configuração, o GitHub Pages gerará um link onde o jogo poderá ser acessado online.
 
+### Atividades
+
+Faça as seguintes alterações no jogo de forma que:
+
+* Suporte tabuleiro 4x4.
+* Altere as cores, fonte, espaçamento no CSS.
+* Pegue outras imagens de personagens na internet para personalizar o seu jogo.
+
 ### Melhorias no Projeto do Jogo
 
 A seguir, são apresentadas algumas sugestões de aprimoramento para o projeto do jogo:
@@ -1170,11 +1178,11 @@ A seguir, são apresentadas algumas sugestões de aprimoramento para o projeto d
 
 Com os conhecimentos adquiridos em HTML, CSS e JavaScript, desenvolva novos projetos para praticar e consolidar o aprendizado:
 
-* Crie uma **página pessoal**.
+* Desenvolva uma **página pessoal**.
 * Desenvolva uma **calculadora**.
-* Construa um **jogo da memória**.
-* Construa um **jogo de campo minado**.
-* Construa um **jogo pedra, papel e tesoura**.
+* Desenvolva um **jogo da memória**.
+* Desenvolva um **jogo de campo minado**.
+* Desenvolva um **jogo pedra, papel e tesoura**.
 
 ## Créditos e Referências
 
