@@ -11,3 +11,9 @@ Todas as mudanças neste projeto serão documentadas neste arquivo.
 ## 2025-2
 
 * Atualização da escrita do tutorial.
+
+## 2026-1
+
+* Atualização da escrita do tutorial.
+* Atualização das imagens do tutorial.
+* Inserção de seção Analisar Erros no Desenvolvimento.
