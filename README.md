@@ -55,11 +55,16 @@ A seguir estão listados os principais recursos empregados no desenvolvimento de
 
 ### Ferramentas
 
-* Visual Studio Code - Ambiente de Desenvolvimento Integrado - [Link](https://code.visualstudio.com/)
-* Git - Sistema de controle de versão - [Link](https://git-scm.com/)
-* Github - Plataforma de hospedagem e colaboração em projetos de software - [Link](https://github.com/)
-* Live Server (Extensão VS Code) - Servidor web para desenvolvimento local - [Link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-* http.server - Servidor web simples incluso na biblioteca padrão do Python - [Link](https://docs.python.org/3/library/http.server.html)
+* Visual Studio Code - Ambiente de Desenvolvimento Integrado
+    * [Link site Visual Studio](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão
+    * [Link site do Git](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software
+    * [Link site do Github](https://github.com/)
+* Live Server (Extensão VS Code) - Servidor web para desenvolvimento local
+    * [Link marketplace do Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+* http.server - Servidor web simples incluso na biblioteca padrão do Python
+    * [Link documentação do http.server](https://docs.python.org/3/library/http.server.html)
 
 ## Fundamentos Teóricos
 
@@ -99,15 +104,15 @@ A arquitetura web de três camadas é um padrão de design de software que organ
 
 Essa separação facilita a manutenção e escalabilidade da aplicação, permitindo que cada camada possa ser modificada ou melhorada de forma independente.
 
-![Arquitetura das Aplicações Web](./docs/arquitetura-web.png)
+![Arquitetura das Aplicações Web](./docs/arquitetura-web2.png)
 
-Fonte: [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/](https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/)
+Fonte: Baseada em [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/](https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/)
 
 O presente projeto foca no desenvolvimento da Camada de Apresentação. Essa camada pode ser organizada através da separação em HTML (ou estrutura), CSS (ou apresentação) e JavaScript (ou comportamento).
 
-![Camada de Apresentação](./docs/Camada-Apresentação.png)
+![Camada de Apresentação](./docs/Camada-Apresentação2.png)
 
-Fonte: [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://twitter.com/cewebbr/status/1290302291388424193/photo/1)
+Fonte: Baseada em [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://twitter.com/cewebbr/status/1290302291388424193/photo/1)
 
 ## Objetivo da Aula
 
@@ -990,7 +995,7 @@ Abra o arquivo `index.html` no navegador. A página deverá se parecer com a ima
 
 Agora, além da jogabilidade, o jogo exibe personagens temáticos, animações de destaque e um histórico de resultados, deixando a experiência mais divertida e imersiva.
 
-### Incorpor jQuery no Jogo
+### Incorporar jQuery no Jogo
 
 Nesta etapa iremos simplificar o código JavaScript através da utilização da biblioteca jQuery. O jQuery possui como objetivo simplificar a manipulação de elementos em páginas web. Ele fornece uma forma mais curta, intuitiva e compatível entre navegadores de escrever código JavaScript.
 
@@ -1139,6 +1144,38 @@ mostrarStatus();
 
 Abra o arquivo `index.html` no navegador. Repare que o jogo continua o mesmo, mas o código ficou mais simples.
 
+### Analisar Erros no Desenvolvimento
+
+Nesta etapa, iremos aprender a analisar erros no desenvolvimento. Para isso, utilizaremos as Ferramentas do Desenvolvedor do navegador (DevTools).
+
+**Abra o Inspecionar**
+
+No navegador (Chrome, Edge ou Firefox), clique com o botão direito na página, selecione Inspecionar (ou use o atalho F12).
+
+Isso abrirá o painel de desenvolvimento, gerando uma imagem semelhante a mostrada abaixo.
+
+![Devtools 1](./docs/devtools-1.png)
+
+**Inserindo Erros**
+
+Agora, iremos inserir alguns erros para ver as saídas geradas no Console do Inspecionar.
+
+Troque o nome da imagem `img_logo.png` para `img_logo2.png`. Com essa mudança não será encontrada a imagem e um erro (404 Not Found) semelhante ao mostrado abaixo será exibido.
+
+![Devtools 2](./docs/devtools-2.png)
+
+Troque o nome da função javascript `fazerMovimento()` para `fazerMovimento2()`. Com essa mudança não será encontrada a função e um erro de referência semelhante ao mostrado abaixo será exibido.
+
+![Devtools 3](./docs/devtools-3.png)
+
+Troque o nome do arquivo `styles.css` para `styles2.css` dentro do HTML. Com essa mudança não será encontrado esse arquivo e uma imagem semelhante mostrada abaixo será exibida.
+
+![Devtools 4](./docs/devtools-4.png)
+
+Troque o nome do arquivo `script.js` para `script2.js` dentro do HTML. Com essa mudança não será encontrado esse arquivo e um erro (404 Not Found) será exibido. Além disso, ao se clicar na celula para realizar uma jogada mais um erro será exibido, pois a função `fazerMovimento()` não será encontrada.
+
+![Devtools 6](./docs/devtools-6.png)
+
 ### Publicar o Jogo no Github
 
 Para disponibilizar o jogo desenvolvido no GitHub Pages, siga os passos abaixo:
@@ -1171,6 +1208,14 @@ A seguir, são apresentadas algumas sugestões de aprimoramento para o projeto d
 * **Temas Visuais:** crie diferentes temas gráficos para o tabuleiro, como *Espaço*, *Fantasia*, *Subaquático* ou *Histórico*. Cada tema pode incluir planos de fundo exclusivos e ícones personalizados para os jogadores.
 * **Modo Torneio:** adicione uma funcionalidade em que o jogador que vencer 10 partidas consecutivas desbloqueie uma animação especial, com pódio e a opção de reiniciar o torneio.
 * **Destacar a Linha Vencedora:** adicione um destaque com cores a linha vencedora do jogo.
+
+### Momento para Reflexão
+
+* Como a separação de estrutura, apresentação e comportamento torna o desenvolvimento web mais organizado e sustentável?
+* De que forma a modularização do CSS (com classes e seletores bem organizados) facilita a escalabilidade de um projeto?
+* JavaScript tem acesso direto ao DOM. Quais são as vantagens e possíveis perigos dessa capacidade?
+* Por que separar lógica e estilo é bom para a manutenibilidade e legibilidade do código?
+* Ao fazer uma página web, como você pode testar de forma eficaz para garantir que ela funcione em diferentes navegadores e dispositivos?
 
 ## Desenvolva Novos Projetos
 
