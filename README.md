@@ -114,6 +114,22 @@ O presente projeto foca no desenvolvimento da Camada de Apresentação. Essa cam
 
 Fonte: Baseada em [https://twitter.com/cewebbr/status/1290302291388424193/photo/1](https://twitter.com/cewebbr/status/1290302291388424193/photo/1)
 
+### HTML Semântico
+
+O HTML é utilizado para estruturar a informação e destacar a sua semântica, ou seja, o significado dos conteúdos exibidos em uma página. Ao longo do tempo, o HTML passou por diversas atualizações importantes.
+
+Até o HTML 4, a estrutura das páginas era predominantemente não semântica, pois utilizava, em grande parte, elementos genéricos (como `<div>`), sem indicar claramente o papel de cada parte do conteúdo.
+
+Com a chegada do HTML5, foram introduzidas novas tags semânticas, que permitem organizar melhor a informação e expressar com mais clareza o significado de cada seção da página, como `<header>`, `<nav>`, `<section>`, `<article>` e `<footer>`.
+
+![Camada de Apresentação](./docs/html-semantico.jpeg)
+
+Fonte: [https://devmaker.online/posts/diferenca-entre-templates-html-semanticos-e-nao-semanticos/](https://devmaker.online/posts/diferenca-entre-templates-html-semanticos-e-nao-semanticos/)
+
+Ao analisar a imagem acima, observe que, no exemplo da esquerda (não semântico), há uma "sopa de DIVs", dificultando a compreensão da estrutura do documento. Já no exemplo da direita (semântico), essas DIVs foram substituídas por elementos mais apropriados, que carregam significado e tornam o código mais organizado e legível.
+
+Essa evolução do HTML também contribuiu para melhorar a eficácia dos mecanismos de busca, que passaram a compreender melhor o conteúdo das páginas, favorecendo sua indexação e acessibilidade.
+
 ## Objetivo da Aula
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
