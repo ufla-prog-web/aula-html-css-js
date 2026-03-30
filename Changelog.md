@@ -17,3 +17,4 @@ Todas as mudanças neste projeto serão documentadas neste arquivo.
 * Atualização da escrita do tutorial.
 * Atualização das imagens do tutorial.
 * Inserção de seção Analisar Erros no Desenvolvimento.
+* Inserção de seção HTML Semântico
