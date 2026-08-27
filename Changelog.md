@@ -18,3 +18,8 @@ Todas as mudanças neste projeto serão documentadas neste arquivo.
 * Atualização das imagens do tutorial.
 * Inserção de seção Analisar Erros no Desenvolvimento.
 * Inserção de seção HTML Semântico
+
+## 2026-2
+
+* Inclusão de pasta com recursos.
+* Ajuste na seção de referências.
