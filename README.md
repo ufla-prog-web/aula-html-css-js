@@ -20,7 +20,7 @@
 * [Objetivo da Aula](#objetivo-da-aula)
 * [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
 * [Desenvolva Novos Projetos](#desenvolva-novos-projetos)
-* [Créditos e Referências](#créditos-e-referências)
+* [Referências e Materiais de Apoio](#referências-e-materiais-de-apoio)
 
 ## Introdução
 
@@ -230,7 +230,7 @@ Crie uma pasta chamada `code` na raiz do projeto `aula-html-css-js`. Em seguida,
 
 Observe que a maioria dos elementos HTML possui uma tag de abertura e uma tag de fechamento, como `<title>` e `</title>`. Entretanto, existem algumas exceções, como `<hr>`, que não possuem fechamento. Alguns elementos possuem atributos, como o elemento `<img>` que possui os atributos `src`, `alt`, `width` e `height`.
 
-Por fim, copie o arquivo `img_logo.png` da pasta `page` para a pasta `code`.
+Por fim, copie o arquivo `img_logo.png` da pasta `recursos` para a pasta `code`.
 
 ### Executar a Aplicação Web
 
@@ -248,11 +248,11 @@ Abra o arquivo `index.html` em um navegador para visualizar o conteúdo da pági
         python3 -m http.server
         ```
 
-        Se desejar utilizar uma porta específica (por exemplo, 8123), execute:
+        Se desejar utilizar uma porta específica (por exemplo, 8008), execute:
 
         ```bash
         cd code
-        python3 -m http.server 8123
+        python3 -m http.server 8008
         ```
 
 Após iniciar o servidor, abra o navegador e acesse a página. O resultado deverá se assemelhar à imagem abaixo:
@@ -756,7 +756,7 @@ No HTML, iremos colocar duas imagens `gif` dos personagens citados, além de adi
 
 **Atualizando o HTML**
 
-Antes de começar, copie os arquivos `img_mario.gif` e `img_luigi.gif` da pasta `page` para a pasta `code`.
+Antes de começar, copie os arquivos `img_mario.gif` e `img_luigi.gif` da pasta `recursos` para a pasta `code`.
 
 Substitua o conteúdo do arquivo `index.html` pelo código abaixo:
 
@@ -1245,13 +1245,13 @@ Com os conhecimentos adquiridos em HTML, CSS e JavaScript, desenvolva novos proj
 * Desenvolva um **jogo de campo minado**.
 * Desenvolva um **jogo pedra, papel e tesoura**.
 
-## Créditos e Referências
+## Referências e Materiais de Apoio
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Para aprofundar os estudos sobre HTML, CSS, JavaScript e jQuery, recomenda-se a consulta aos seguintes cursos:
+Para complementar e aprofundar os conhecimentos apresentados neste material, recomenda-se a consulta às documentações e aos tutoriais disponibilizados pela W3Schools, que reúnem conteúdos introdutórios e exemplos práticos relacionados às principais tecnologias abordadas:
 
-* [Curso de HTML - W3Schools](https://www.w3schools.com/html/default.asp)
-* [Curso de CSS - W3Schools](https://www.w3schools.com/css/default.asp)
-* [Curso de JavaScript - W3Schools](https://www.w3schools.com/js/default.asp)
-* [Curso de jQuery - W3Schools](https://www.w3schools.com/jquery/default.asp)
+* **HTML.** [W3Schools - Curso de HTML](https://www.w3schools.com/html/default.asp)
+* **CSS.** [W3Schools - Curso de CSS](https://www.w3schools.com/css/default.asp)
+* **JavaScript.** [W3Schools - Curso de JavaScript](https://www.w3schools.com/js/default.asp)
+* **jQuery.** [W3Schools - Curso de jQuery](https://www.w3schools.com/jquery/default.asp)
